@@ -1,6 +1,233 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!--fengmap-->
+    <color name="color_item_building_bg">#f1f2f7</color>
+    <color name="color_item_building_selected_bg">#dee1e3</color>
+    <color name="color_item_city_bg_n">#fefefe</color>
+    <color name="color_item_city_bg_click">#dee1e3</color>
+    <color name="color_gray_line">#c7c7c7</color>
+    <color name="color_nav_green">#15bb79</color>
+    <color name="color_gray_text">#666666</color>
+    <color name="color_nav_red">#ff5505</color>
+    <color name="color_divider">#cccccc</color>
+    <color name="app_theme_color">#eeee5505</color>
+    <color name="app_bar_text_color">#565656</color>
+    <color name="divider_view_color">#ADABA9</color>
+    <color name="text">#a9a9a9</color>
+    <!---->
+
+
+    <color name="blue_70">#B23A5FCD</color>
+    <color name="green_70">#ee7ab193</color>
+    <color name="green_25">#3f7ab193</color>
+    <color name="green_50">#557ab193</color>
+
+
+    <color name="boder_green">#126600</color>
+
+    <!-- 白色 -->
+    <color name="white">#FFFFFFFF</color>
+    <!-- 90%透明白色 -->
+    <color name="white_90">#E6FFFFFF</color>
+    <!-- 80%半透明绿色 -->
+    <color name="half_green">#EE1E9F77</color>
+    <!-- 15%半透明咖色 -->
+    <color name="half_brown">#26000000</color>
+    <!-- 100%全透明 -->
+    <color name="half_full">#00000000</color>
+    <!-- 25%全透明 -->
+    <color name="half_white_25">#3fffffff</color>
+    <color name="half_white_75">#e6ffffff</color>
+    <!-- title背景色 咖色  80% b不透明-->
+    <color name="title_bg_80">#DB847678</color>
+    <color name="block_90">#DB000000</color>
+    <color name="bg_gray">#FFE3E3E7</color>
+    <color name="text_gray">#666666</color>
+    <color name="orange">#FFE84E0E</color>
+    <color name="btn_orange">#EC622A</color>
+    <color name="transparent">#00000000</color>
+    <color name="bg">#FFF39200</color>
+    <color name="blue">#FF007AA2</color>
+    <color name="green">#7ab193</color>
+    <color name="green_90">#90C98C</color>
+    <color name="head_remind_bg">#deed8256</color>
+
+    <color name="orange_98">#FFB198</color>
+    <color name="blackish_green">#477979</color>
+    <color name="half_green_80">#207ab193</color>
+    <color name="light_blue">#5CACEE</color>
+    <color name="light_gray">#87CEEB</color>
+    <color name="orange_red">#613030</color>
+    <color name="whiteGray">#ffC9CACB</color>
+    <color name="nomalGray">#838B83</color>
+    <color name="black2">#80000000</color>
+    <color name="transparent_bg">#a0000000</color>
+    <color name="imagePage_bg">#cc000000</color>
+    <!-- title背景色 咖色 -->
+    <color name="title_bg">#ee652c</color>
+    <!-- 背景白色 -->
+    <color name="title_world">#E0FFFFFF</color>
+    <!-- 筛选页面背景色咖色 -->
+    <color name="filter_bg">#59494d</color>
+    <!-- 主框架中间部分背景色 -->
+    <color name="common_bg">#E6E6E6</color>
+    <!-- 部分文字背景色(餐饮) -->
+    <color name="text_gray_bg">#abadb9</color>
+
+    <color name="btn_bg_green_80">#DBE1F6DB</color>
+    <!-- 按钮背景色 绿色 -->
+    <color name="btn_bg_white_80">#DBFFFFFF</color>
+    <color name="btn_bg_green">#7ab193</color>
+    <!-- 文字颜色(重要突出字,强调字,白色背景装饰字,浅灰色背景装饰字) 绿色 -->
+    <color name="text_color_green">#6fa78e</color>
+    <!-- 次要内容字,白色背景注释字,浅灰色背景注释字,价格以及具体内容信息 -->
+    <color name="text_gray_value">#8b8d9e</color>
+    <!-- 标题字,主要内容字,输入框文字,内容类别标题信息 -->
+    <color name="text_gray_lable">#484b59</color>
+    <!--用户信息文字颜色-->
+    <color name="text_label">#d0d0d0</color>
+    <!-- 弹出框文字(餐饮拨打电话部分等) -->
+    <color name="text_color_blue">#076fec</color>
+    <!-- 浅灰色底的分割线 -->
+    <color name="line_color_out">#d0d1d5</color>
+    <!-- 白色底分割线 -->
+    <color name="line_color_in">#e3e4e8</color>
+
+    <color name="red_point">#e36274</color>
+    <color name="text_color_53">#535353</color>
+    <!-- 筛选右侧侧滑出的分割线 -->
+    <color name="filter_line_color">#74666a</color>
+    <color name="seleted_date_E6">#4aE6e6e6</color>
+    <color name="red_E4_bg">#e497a2</color>
+    <color name="grey_959595_bg">#959595</color>
+    <color name="green_A5_bg">#a5c6b4</color>
+
+    <color name="red_E3_bg">#e36274</color>
+    <color name="grey_5F_bg">#5f5f5f</color>
+    <color name="grey_84_bg">#847678</color>
+    <color name="green_7A_bg">#7ab193</color>
+
+    <!-- 日历 -->
+    <color name="custom_header_text">#7AB193</color>
+    <color name="custom_selected">#A8D324</color>
+    <color name="custom_background">#FFFFFF</color>
+
+    <color name="custom_background_today">#333</color>
+    <color name="custom_background_disabled">#CCCCCC</color>
+    <!-- day字体颜色-->
+    <color name="custom_text_selected">#FFFFFFFF</color>
+    <color name="custom_text_inactive">#999999</color>
+
+    <color name="calendar_background">#000000</color>
+    <color name="recordremind_background">#FFFFFF</color>
+    <color name="border_color">#FFFFFF</color>
+    <color name="weekname_color">#FFFFFF</color>
+    <color name="day_color">#FFFFFF</color>
+    <color name="inner_grid_color">#FFFFFF</color>
+    <color name="prev_next_month_day_color">#999999</color>
+    <color name="text_color">#FFFF00</color>
+    <color name="recordremindtext_color">#000000</color>
+    <color name="current_day_color">#FF0000</color>
+    <color name="today_background_color">#FF0000</color>
+    <color name="today_color">#FFFFFF</color>
+    <color name="sunday_saturday_color">#FF0000</color>
+    <color name="sunday_saturday_prev_next_month_day_color">#990000</color>
+    <color name="bgcolor">#ffffff</color>
+    <color name="txtcolor">#000000</color>
+    <color name="Calendar_WeekBgColor">#EFE7DE</color>
+    <color name="Calendar_WeekFontColor">#8C8A8C</color>
+    <color name="Calendar_DayBgColor">#F7F7F7</color>
+    <color name="isHoliday_BgColor">#E0E0E0</color>
+    <color name="chat_layout_BgColor">#BBE0E0E0</color>
+    <color name="unPresentMonth_FontColor">#8C8A8C</color>
+    <color name="isPresentMonth_FontColor">#000000</color>
+    <color name="isToday_BgColor">#EBDCC1</color>
+    <color name="specialReminder">#FF0000</color>
+    <color name="commonReminder">#BDBAB5</color>
+
+    <color name="bg_color">#EDEDED</color>
+    <color name="contents_text">#ff000000</color>
+    <color name="encode_view">#ffffffff</color>
+    <color name="help_button_view">#ffcccccc</color>
+    <color name="help_view">#ff404040</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_image_border">#ffffffff</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="sbc_header_text">#ff808080</color>
+    <color name="sbc_header_view">#ffffffff</color>
+    <color name="sbc_list_item">#fffff0e0</color>
+    <color name="sbc_layout_view">#ffffffff</color>
+    <color name="sbc_page_number_text">#ff000000</color>
+    <color name="sbc_snippet_text">#ff4b4b4b</color>
+    <color name="half_snippet_text">#aa4b4b4b</color>
+    <color name="share_text">#ff000000</color>
+    <color name="share_view">#ffffffff</color>
+    <color name="status_view">#50000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="header">#58567D</color>
+    <color name="grgray">#686868</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+
+    <!-- add by renjianhong for map-->
+    <color name="gray_1">#343434</color>
+    <color name="gray_2">#383838</color>
+    <color name="gray_3">#696969</color>
+    <color name="btn_bg">#C7EFC7</color>
+    <color name="btn_stroke">#8DEFB2</color>
+    <color name="action_bar_bg">#dfDDDDDD</color>
+    <color name="logo_text_color">#5a5a5a</color>
+
+    <color name="dim_foreground_dark_inverse">#323232</color>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="status_bg">#00000000</color>
+    <color name="status_w">#ffffff</color>
+    <color name="white2">#70ffffff</color>
+    <color name="main_blue_light">#3F56B5</color>
+    <color name="main_blue_dark">#30459E</color>
+    <color name="main_white">#FFFFFF</color>
+    <color name="main_black">#000000</color>
+    <color name="main_black_grey">#6D6D6D</color>
+
+    <!-- 地图相关常用颜色 -->
+    <color name="gray_light">#b7c0bc</color>
+    <color name="dark_grey">#A3A3A3</color>
+    <color name="black">#ff000000</color>
+    <color name="gray">#33aaaaaa</color>
+    <color name="red">#ffff0000</color>
+    <color name="yellow">#ffcf53</color>
+    <color name="bg_after_text">#a2ce62</color>
+    <color name="scan_red">#ee3e53</color>
+    <color name="pink">#FA6E9F</color>
+    <!--<color name="orange_title">#ee652c</color>-->
+
+    <!--特殊字体-->
+    <color name="main_bg">#CAC9CF</color>
+    <color name="hint_color_2">#979797</color>
+    <color name="common_text_color_1">#696969</color>
+    <color name="common_text_color_2">#363636</color>
+    <color name="block_seg_color">#CBCBCB</color>
+
+    <color name="status_bar_color">#F9F9F9</color>
+    <color name="action_bar_title">#1A1A1A</color>
+
+    <color name="floor_name_bg">#F0F0F0</color>
+    <color name="floor_name_bg_hover">#D9D9D9</color>
+
+    <color name="block_bg">#B9F1F0F5</color>
+    <color name="block_stroke">#AFAFAF</color>
+    <color name="block_bg_2">#E1E1E1</color>
+    <color name="block_bg_3">#FFFFFF</color>
+    <color name="white_bg_1">#F6FFFFFF</color>
+    <color name="sliding_panel_bg">#FCFCFA</color>
+    <color name="location_text_color">#2d2d2d</color>
 </resources>

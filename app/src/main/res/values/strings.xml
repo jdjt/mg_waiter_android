@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="warm_prompt">温馨提示：忘记密码，请联系管理员重置密码</string>
+
 </resources>
