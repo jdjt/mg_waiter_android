@@ -5,6 +5,7 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.android.mgwaiter"
+        buildConfigField 'String','API_SERVER_URL','"http://rc-ws.mymhotel.com/"'
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
@@ -26,5 +27,6 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.2.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
     testCompile 'junit:junit:4.12'
 }
