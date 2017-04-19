@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+<!--           任务列表二级列表父列表样式        -->
+    <TextView
+        android:id="@+id/task_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="15dp"
+        android:text="送餐任务"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_20" />
+
+    <TextView
+        android:id="@+id/task_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/task_type"
+        android:layout_marginLeft="3dp"
+        android:textColor="@color/black"
+        android:text="编号" />
+
+    <RatingBar
+       android:id="@+id/ratingBar"
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:isIndicator="true"
+        android:layout_margin="8dp"
+        android:rating="3"
+        android:stepSize="1"
+        android:numStars="5"
+        android:layout_alignTop="@+id/task_amount" />
+
+</RelativeLayout>

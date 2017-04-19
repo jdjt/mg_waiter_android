@@ -10,7 +10,7 @@ import com.android.mgwaiter.R;
 
 /**
  * Created by huyanan on 2017/4/14.
- *
+ *登录页面
  */
 
 public class LoginActivity extends AppCompatActivity{

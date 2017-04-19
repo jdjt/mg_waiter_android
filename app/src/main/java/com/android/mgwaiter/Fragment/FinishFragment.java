@@ -13,26 +13,14 @@
 //import android.widget.TextView;
 //import android.widget.Toast;
 //
-//import com.android.pc.ioc.inject.InjectHttpErr;
-//import com.android.pc.ioc.inject.InjectHttpOk;
-//import com.android.pc.ioc.internet.FastHttpHander;
-//import com.android.pc.ioc.internet.InternetConfig;
-//import com.android.pc.ioc.internet.ResponseEntity;
-//import com.android.pc.util.Handler_Inject;
-//import com.android.pc.util.Handler_Json;
-//import com.android.pc.util.Handler_Network;
-//import com.google.gson.JsonObject;
+//
+//import com.android.mgwaiter.R;
 //
 //import java.util.ArrayList;
 //import java.util.HashMap;
 //import java.util.List;
 //import java.util.Map;
 //
-//import mgwaiter.jdjt.com.R;
-//import mgwaiter.jdjt.com.adapter.MealExpandableListAdapter;
-//import mgwaiter.jdjt.com.common.Url;
-//
-//import static com.fengmap.android.FMMapSDK.getApplicationContext;
 //
 ///**
 // * @author huyanan
@@ -48,7 +36,7 @@
 //    String waiterId;
 //    private ArrayList<HashMap<String, Object>> arraylist;//任务编号列表
 //    ArrayList<HashMap<String, String>> taskArrayList = new ArrayList<HashMap<String, String>>();
-//    MealExpandableListAdapter mealExpandableListAdapter;
+////    MealExpandableListAdapter mealExpandableListAdapter;
 //
 //    @Override
 //    public View onCreateView(LayoutInflater inflater, ViewGroup container,
