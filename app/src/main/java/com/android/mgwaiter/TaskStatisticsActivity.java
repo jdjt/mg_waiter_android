@@ -1,45 +1,45 @@
-//package com.android.mgwaiter;
-//
-//import android.os.Bundle;
-//import android.support.v4.app.Fragment;
-//import android.support.v4.app.FragmentManager;
-//import android.support.v4.app.FragmentPagerAdapter;
-//import android.support.v4.app.FragmentTransaction;
-//import android.support.v4.view.ViewPager;
-//import android.support.v7.app.AppCompatActivity;
-//import android.view.ViewGroup;
-//import android.widget.TextView;
-//
-//import com.android.mgwaiter.Fragment.AbolishFragment;
-//import com.android.mgwaiter.Fragment.FinishFragment;
-//import com.android.mgwaiter.view.StatusTitle;
-//
-//import java.util.ArrayList;
-//import java.util.List;
-//import java.util.Map;
-//
-///**
-// * Created by huyanan on 2017/4/17.
-// * 统计页面
-// */
-//
-//public class TaskStatisticsActivity extends AppCompatActivity {
-////    private TextView rr, rrr;//首页返回按钮和日历按钮的  （占位）
+package com.android.mgwaiter;
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import com.android.mgwaiter.Fragment.AbolishFragment;
+import com.android.mgwaiter.Fragment.FinishFragment;
+import com.android.mgwaiter.view.StatusTitle;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * Created by huyanan on 2017/4/17.
+ * 统计页面
+ */
+
+public class TaskStatisticsActivity extends AppCompatActivity {
+//    private TextView rr, rrr;//首页返回按钮和日历按钮的  （占位）
 //    private StatusTitle statusTitle;
-//    TaskAdapter adapter;
+////    TaskAdapter adapter;
 //
 //
 //    List<String> parent = null;//列表头
 //    Map<String, List<String>> map = null;//列表详情
 //    private ViewPager viewpager;
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.task_statistics_activity);
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.task_statistics_activity);
 //        inView();
 //        initStatusBar();
-//    }
+    }
 //
 //    //初始化控件
 //    private void inView() {
@@ -106,29 +106,29 @@
 //    }
 //
 //
-//    public Object instantiateItem(ViewGroup container, int position) {
-//        //得到缓存的fragment
-//        Fragment fragment = (Fragment) super.instantiateItem(container,position);
-//        //得到tag
-//        String fragmentTag = fragment.getTag();
-//        if (fragmentsUpdateFlag[position % fragmentsUpdateFlag.length]) {
-//            //如果这个fragment需要更新
-//            FragmentTransaction ft = fm.beginTransaction();
-//            //移除旧的fragment
-//            ft.remove(fragment);
-//            //换成新的fragment
-//            fragment = list_fragment.get(position % list_fragment.size());
-//            //添加新fragment时必须用前面获得的tag ❶
-//            ft.add(container.getId(), fragment, fragmentTag);
-//            ft.attach(fragment);
-//            ft.commit();
-//            //复位更新标志
-//            fragmentsUpdateFlag[position % fragmentsUpdateFlag.length] = false;
-//
-//        }
-//        return fragment;
-//
-//    }
+////    public Object instantiateItem(ViewGroup container, int position) {
+////        //得到缓存的fragment
+////        Fragment fragment = (Fragment) super.instantiateItem(container,position);
+////        //得到tag
+////        String fragmentTag = fragment.getTag();
+////        if (fragmentsUpdateFlag[position % fragmentsUpdateFlag.length]) {
+////            //如果这个fragment需要更新
+////            FragmentTransaction ft = fm.beginTransaction();
+////            //移除旧的fragment
+////            ft.remove(fragment);
+////            //换成新的fragment
+////            fragment = list_fragment.get(position % list_fragment.size());
+////            //添加新fragment时必须用前面获得的tag ❶
+////            ft.add(container.getId(), fragment, fragmentTag);
+////            ft.attach(fragment);
+////            ft.commit();
+////            //复位更新标志
+////            fragmentsUpdateFlag[position % fragmentsUpdateFlag.length] = false;
+////
+////        }
+////        return fragment;
+////
+////    }
 //
 //    public Fragment getItem(int position) {
 //        return list_fragment.get(position);
@@ -148,7 +148,6 @@
 ////
 ////            }
 //    }
-//
-//}
-//
-//}
+
+}
+

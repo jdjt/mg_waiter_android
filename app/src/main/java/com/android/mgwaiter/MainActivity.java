@@ -2,6 +2,7 @@ package com.android.mgwaiter;
 
 import android.content.Context;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,9 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.mgwaiter.login.LoginActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -93,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                  break;
              //统计
              case R.id.tv_count:
-
+                startActivity(new Intent(this,TaskStatisticsActivity.class));
                  break;
          }
     }

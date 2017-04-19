@@ -61,8 +61,8 @@
     <color name="black2">#80000000</color>
     <color name="transparent_bg">#a0000000</color>
     <color name="imagePage_bg">#cc000000</color>
-    <!-- title背景色 咖色 -->
-    <color name="title_bg">#ee652c</color>
+    <!-- title背景色 蓝色 -->
+    <color name="title_bg">#2984bd</color>
     <!-- 背景白色 -->
     <color name="title_world">#E0FFFFFF</color>
     <!-- 筛选页面背景色咖色 -->
@@ -235,4 +235,5 @@
     <color name="material_deep_teal_50">#ff009688</color>
     <color name="blue_btn_bg_color">#AEDEF4</color>
     <color name="error_stroke_color">#F27474</color>
+    <color name="gray_btn_false">#898989</color>
 </resources>

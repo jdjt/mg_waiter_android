@@ -16,13 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- 统计  -->
+        <activity android:name=".TaskStatisticsActivity" />
+        <!-- 登录  -->
+        <activity android:name=".login.LoginActivity"/>
+        <!-- 修改密码  -->
+        <activity android:name=".login.ResetPasswordActivity"/>
 
-
-        <!--<activity-->
-            <!--android:name="com.android.mgwaiter.login.LoginActivity"-->
-            <!--android:label="@string/app_name"-->
-            <!--android:launchMode="singleTask"-->
-            <!--android:screenOrientation="portrait" />-->
     </application>
 
 

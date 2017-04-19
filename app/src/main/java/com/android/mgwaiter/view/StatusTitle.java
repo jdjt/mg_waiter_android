@@ -86,14 +86,14 @@ public class StatusTitle extends RelativeLayout implements View.OnClickListener{
 
     if (isLeft){ // 左侧选中
       ll_action_bar_left.setBackgroundResource(R.color.title_bg);
-      tv_action_bar_left.setTextColor(getResources().getColor(R.color.black));
-      ll_action_bar_right.setBackgroundResource(R.color.white);
-      tv_action_bar_right.setTextColor(getResources().getColor(R.color.black));
+      tv_action_bar_left.setTextColor(getResources().getColor(R.color.white));
+      ll_action_bar_right.setBackgroundResource(R.color.gray_btn_false);
+      tv_action_bar_right.setTextColor(getResources().getColor(R.color.white));
     } else {
       ll_action_bar_right.setBackgroundResource(R.color.title_bg);
-      tv_action_bar_right.setTextColor(getResources().getColor(R.color.black));
-      ll_action_bar_left.setBackgroundResource(R.color.white);
-      tv_action_bar_left.setTextColor(getResources().getColor(R.color.black));
+      tv_action_bar_right.setTextColor(getResources().getColor(R.color.white));
+      ll_action_bar_left.setBackgroundResource(R.color.gray_btn_false);
+      tv_action_bar_left.setTextColor(getResources().getColor(R.color.white));
     }
 
     this.isCenterLeft = isLeft;
