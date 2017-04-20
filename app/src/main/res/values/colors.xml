@@ -17,12 +17,9 @@
     <color name="text">#a9a9a9</color>
     <!---->
 
-
-    <color name="blue_70">#B23A5FCD</color>
     <color name="green_70">#ee7ab193</color>
     <color name="green_25">#3f7ab193</color>
     <color name="green_50">#557ab193</color>
-
 
     <color name="boder_green">#126600</color>
 
@@ -64,8 +61,8 @@
     <color name="black2">#80000000</color>
     <color name="transparent_bg">#a0000000</color>
     <color name="imagePage_bg">#cc000000</color>
-    <!-- title背景色 咖色 -->
-    <color name="title_bg">#ee652c</color>
+    <!-- title背景色 蓝色 -->
+    <color name="title_bg">#2984bd</color>
     <!-- 背景白色 -->
     <color name="title_world">#E0FFFFFF</color>
     <!-- 筛选页面背景色咖色 -->
@@ -230,4 +227,13 @@
     <color name="white_bg_1">#F6FFFFFF</color>
     <color name="sliding_panel_bg">#FCFCFA</color>
     <color name="location_text_color">#2d2d2d</color>
+    <color name="colorgreen">#009900</color>
+    <color name="colorgrey"> #e5e5e5</color>
+    <color name="colorblack"> #000000</color>
+    <color name="colorwhite"> #ffffff</color>
+    <color name="blue_70">#B23A5FCD</color>
+    <color name="material_deep_teal_50">#ff009688</color>
+    <color name="blue_btn_bg_color">#AEDEF4</color>
+    <color name="error_stroke_color">#F27474</color>
+    <color name="gray_btn_false">#898989</color>
 </resources>
