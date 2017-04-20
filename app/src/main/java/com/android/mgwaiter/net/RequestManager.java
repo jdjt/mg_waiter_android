@@ -11,14 +11,17 @@ import com.android.mgwaiter.common.HeaderConst;
 import com.android.mgwaiter.utils.SharedPreferencesUtil;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.FormBody;
+import okhttp3.Headers;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -260,7 +263,13 @@ public class RequestManager {
                     if (response.isSuccessful()) {
                         String string = response.body().string();
                         Log.e(TAG, "response ----->" + string);
-                        successCallBack((T) string, callBack);
+                        ResponseEntity responseEntity = new ResponseEntity();
+                        Headers responseHeaders = response.headers();
+                        responseEntity.setUrl(call.request().url().toString());
+                        responseEntity.setContent(response.body().string(), false);
+                        responseEntity.setJsonParams(call.request().body().toString());
+                        responseEntity.setHeaders(outHeaders(responseHeaders));
+                        successCallBack((T) responseEntity, callBack);
                     } else {
                         failedCallBack("服务器错误", callBack);
                     }
@@ -307,10 +316,17 @@ public class RequestManager {
 
                 @Override
                 public void onResponse(Call call, Response response) throws IOException {
+
                     if (response.isSuccessful()) {
                         String string = response.body().string();
                         Log.e(TAG, "response ----->" + string);
-                        successCallBack((T) string, callBack);
+                        ResponseEntity responseEntity = new ResponseEntity();
+                        Headers responseHeaders = response.headers();
+                        responseEntity.setUrl(call.request().url().toString());
+                        responseEntity.setContent(response.body().string(), false);
+                        responseEntity.setJsonParams(call.request().body().toString());
+                        responseEntity.setHeaders(outHeaders(responseHeaders));
+                        successCallBack((T) responseEntity, callBack);
                     } else {
                         failedCallBack("服务器错误", callBack);
                     }
@@ -354,7 +370,13 @@ public class RequestManager {
                     if (response.isSuccessful()) {
                         String string = response.body().string();
                         Log.e(TAG, "response ----->" + string);
-                        successCallBack((T) string, callBack);
+                        ResponseEntity responseEntity = new ResponseEntity();
+                        Headers responseHeaders = response.headers();
+                        responseEntity.setUrl(call.request().url().toString());
+                        responseEntity.setContent(response.body().string(), false);
+                        responseEntity.setJsonParams(call.request().body().toString());
+                        responseEntity.setHeaders(outHeaders(responseHeaders));
+                        successCallBack((T) responseEntity, callBack);
                     } else {
                         failedCallBack("服务器错误", callBack);
                     }
@@ -425,5 +447,36 @@ public class RequestManager {
                 }
             }
         });
+    }
+
+    private static Map<String, Object> outHeaders(Headers resHeaders) throws UnsupportedEncodingException {
+
+        // 取出头部信息
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put(HeaderConst.MYMHOTEL_TYPE,
+                resHeaders.get(HeaderConst.MYMHOTEL_TYPE) == null ? ""
+                        : resHeaders.get(HeaderConst.MYMHOTEL_TYPE));
+        map.put(HeaderConst.MYMHOTEL_VERSION, resHeaders
+                .get(HeaderConst.MYMHOTEL_VERSION) == null ? "" : resHeaders
+                .get(HeaderConst.MYMHOTEL_VERSION));
+        map.put(HeaderConst.MYMHOTEL_DATATYPE, resHeaders
+                .get(HeaderConst.MYMHOTEL_DATATYPE) == null ? "" : resHeaders
+                .get(HeaderConst.MYMHOTEL_DATATYPE));
+        map.put(HeaderConst.MYMHOTEL_SOURCECODE, resHeaders
+                .get(HeaderConst.MYMHOTEL_SOURCECODE) == null ? "" : resHeaders
+                .get(HeaderConst.MYMHOTEL_SOURCECODE));
+        map.put(HeaderConst.MYMHOTEL_DATETIME, resHeaders
+                .get(HeaderConst.MYMHOTEL_DATETIME) == null ? "" : resHeaders
+                .get(HeaderConst.MYMHOTEL_DATETIME));
+        map.put(HeaderConst.MYMHOTEL_STATUS, resHeaders
+                .get(HeaderConst.MYMHOTEL_STATUS) == null ? "" : resHeaders
+                .get(HeaderConst.MYMHOTEL_STATUS));
+
+        String msg = resHeaders.get(HeaderConst.MYMHOTEL_MESSAGE) == null ? ""
+                : resHeaders.get(HeaderConst.MYMHOTEL_MESSAGE);
+        map.put(HeaderConst.MYMHOTEL_MESSAGE, msg);
+        // 设置输出头部参数信息
+        Log.i("RequestManager","mssage转换后:" + msg);
+        return map;
     }
 }
