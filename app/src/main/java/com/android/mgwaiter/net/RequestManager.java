@@ -6,9 +6,13 @@ import android.os.Handler;
 import android.util.Log;
 
 import com.android.mgwaiter.BuildConfig;
+import com.android.mgwaiter.application.MgApplication;
+import com.android.mgwaiter.common.HeaderConst;
+import com.android.mgwaiter.utils.SharedPreferencesUtil;
 
 import java.io.IOException;
 import java.net.URLEncoder;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.concurrent.TimeUnit;
 
@@ -28,13 +32,14 @@ public class RequestManager {
     private static final MediaType MEDIA_TYPE_JSON = MediaType.parse("application/json;charset=utf-8");//mdiatype 这个需要和服务端保持一致
     private static final MediaType MEDIA_TYPE_MARKDOWN = MediaType.parse("text/x-markdown; charset=utf-8");//mdiatype 这个需要和服务端保持一致
     private static final String TAG = RequestManager.class.getSimpleName();
-    private static final String BASE_URL =  BuildConfig.API_SERVER_URL;//请求接口根地址
+    private static final String BASE_URL = BuildConfig.API_SERVER_URL;//请求接口根地址
     private static volatile RequestManager mInstance;//单利引用
     public static final int TYPE_GET = 0;//get请求
     public static final int TYPE_POST_JSON = 1;//post请求参数为json
     public static final int TYPE_POST_FORM = 2;//post请求参数为表单
     private OkHttpClient mOkHttpClient;//okHttpClient 实例
     private Handler okHttpHandler;//全局处理子线程和M主线程通信
+
     /**
      * 初始化RequestManager
      */
@@ -67,9 +72,11 @@ public class RequestManager {
         }
         return inst;
     }
+
     /**
-     *  okHttp同步请求统一入口
-     * @param actionUrl  接口地址
+     * okHttp同步请求统一入口
+     *
+     * @param actionUrl   接口地址
      * @param requestType 请求类型
      * @param paramsMap   请求参数
      */
@@ -86,13 +93,15 @@ public class RequestManager {
                 break;
         }
     }
+
     /**
      * okHttp异步请求统一入口
+     *
      * @param actionUrl   接口地址
      * @param requestType 请求类型
      * @param paramsMap   请求参数
-     * @param callBack 请求返回数据回调
-     * @param <T> 数据泛型
+     * @param callBack    请求返回数据回调
+     * @param <T>         数据泛型
      **/
     public <T> Call requestAsyn(String actionUrl, int requestType, HashMap<String, String> paramsMap, ReqCallBack<T> callBack) {
         Call call = null;
@@ -112,8 +121,9 @@ public class RequestManager {
 
     /**
      * okHttp get同步请求
-     * @param actionUrl  接口地址
-     * @param paramsMap   请求参数
+     *
+     * @param actionUrl 接口地址
+     * @param paramsMap 请求参数
      */
     private void requestGetBySyn(String actionUrl, HashMap<String, String> paramsMap) {
         StringBuilder tempParams = new StringBuilder();
@@ -141,10 +151,12 @@ public class RequestManager {
             Log.e(TAG, e.toString());
         }
     }
+
     /**
      * okHttp post同步请求
-     * @param actionUrl  接口地址
-     * @param paramsMap   请求参数
+     *
+     * @param actionUrl 接口地址
+     * @param paramsMap 请求参数
      */
     private void requestPostBySyn(String actionUrl, HashMap<String, String> paramsMap) {
         try {
@@ -179,8 +191,10 @@ public class RequestManager {
             Log.e(TAG, e.toString());
         }
     }
+
     /**
      * okHttp post同步请求表单提交
+     *
      * @param actionUrl 接口地址
      * @param paramsMap 请求参数
      */
@@ -213,10 +227,11 @@ public class RequestManager {
 
     /**
      * okHttp get异步请求
+     *
      * @param actionUrl 接口地址
      * @param paramsMap 请求参数
-     * @param callBack 请求返回数据回调
-     * @param <T> 数据泛型
+     * @param callBack  请求返回数据回调
+     * @param <T>       数据泛型
      * @return
      */
     private <T> Call requestGetByAsyn(String actionUrl, HashMap<String, String> paramsMap, final ReqCallBack<T> callBack) {
@@ -257,12 +272,14 @@ public class RequestManager {
         }
         return null;
     }
+
     /**
      * okHttp post异步请求
+     *
      * @param actionUrl 接口地址
      * @param paramsMap 请求参数
-     * @param callBack 请求返回数据回调
-     * @param <T> 数据泛型
+     * @param callBack  请求返回数据回调
+     * @param <T>       数据泛型
      * @return
      */
     private <T> Call requestPostByAsyn(String actionUrl, HashMap<String, String> paramsMap, final ReqCallBack<T> callBack) {
@@ -305,12 +322,14 @@ public class RequestManager {
         }
         return null;
     }
+
     /**
      * okHttp post异步请求表单提交
+     *
      * @param actionUrl 接口地址
      * @param paramsMap 请求参数
-     * @param callBack 请求返回数据回调
-     * @param <T> 数据泛型
+     * @param callBack  请求返回数据回调
+     * @param <T>       数据泛型
      * @return
      */
     private <T> Call requestPostByAsynWithForm(String actionUrl, HashMap<String, String> paramsMap, final ReqCallBack<T> callBack) {
@@ -350,6 +369,7 @@ public class RequestManager {
 
     /**
      * 统一为请求添加头信息
+     *
      * @return
      */
     private Request.Builder addHeaders() {
@@ -359,11 +379,21 @@ public class RequestManager {
                 .addHeader("phoneModel", Build.MODEL)
                 .addHeader("systemVersion", Build.VERSION.RELEASE)
                 .addHeader("appVersion", "3.2.0");
+        String waiterId = (String) SharedPreferencesUtil.getInstence(MgApplication.getInstance().getApplicationContext()).getSharedPreferences("waiterId", "");
+        builder.addHeader(HeaderConst.MYMHOTEL_TICKET, waiterId);
+        builder.addHeader(HeaderConst.MYMHOTEL_TYPE, "1003");
+        builder.addHeader(HeaderConst.MYMHOTEL_VERSION, "1");
+        builder.addHeader(HeaderConst.MYMHOTEL_DATATYPE, "JSON");
+        builder.addHeader(HeaderConst.MYMHOTEL_SOURCECODE, "");
+        builder.addHeader(HeaderConst.MYMHOTEL_DATETIME, new Date().getTime() + "");
+        builder.addHeader(HeaderConst.MYMHOTEL_ACKDATATYPE, "JSON");
+        builder.addHeader("content-type", "application/json;charset=utf-8");
         return builder;
     }
 
     /**
      * 统一同意处理成功信息
+     *
      * @param result
      * @param callBack
      * @param <T>
@@ -381,6 +411,7 @@ public class RequestManager {
 
     /**
      * 统一处理失败信息
+     *
      * @param errorMsg
      * @param callBack
      * @param <T>

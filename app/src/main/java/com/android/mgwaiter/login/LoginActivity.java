@@ -6,4 +6,6 @@ package com.android.mgwaiter.login;
  */
 
 public class LoginActivity {
+
+    
 }
