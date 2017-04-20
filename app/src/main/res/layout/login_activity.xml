@@ -31,13 +31,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="58dp"
                 android:layout_marginLeft="14dp"
-                android:background="@drawable/name_edit"
+                android:layout_weight="1"
+                android:background="@null"
                 android:hint="请输入工号"
-                android:inputType="phone"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:textColor="@color/text_gray_lable"
+                android:textColorHint="@color/line_color_out"
+                android:textSize="@dimen/textsize_30"/>
         </LinearLayout>
 
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@color/line_color_in" />
         <!--<View-->
             <!--android:layout_width="match_parent"-->
             <!--android:layout_height="1dp"-->
@@ -63,16 +71,17 @@
                 android:text="密码：" />
 
             <EditText
-
                 android:id="@+id/et_login_password"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="58dp"
                 android:layout_marginLeft="14dp"
                 android:layout_weight="1"
-                android:background="@drawable/name_edit"
+                android:background="@null"
                 android:hint="请输入密码"
-                android:inputType="textPassword"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:textColor="@color/text_gray_lable"
+                android:textColorHint="@color/line_color_out"
+                android:textSize="@dimen/textsize_30"/>
 
         </LinearLayout>
 
@@ -82,16 +91,14 @@
             <!--android:layout_gravity="right"-->
             <!--android:layout_marginLeft="48dp"-->
             <!--android:layout_marginRight="18dp"-->
-            <!--android:background="@color/line_color_out" />-->
-        <TextView
-            android:layout_marginLeft="48sp"
-            android:textColor="@color/bg"
-            android:layout_marginTop="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/warm_prompt"/>
-    </LinearLayout>
 
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:background="@color/line_color_in" />
 
     <Button
         android:id="@+id/bt_login_button"
@@ -99,5 +106,12 @@
         android:layout_width="match_parent"
         android:layout_marginTop="16dp"
         android:text="登 录" />
+
+    <!--android:background="@color/line_color_out" />-->
+    <TextView
+        android:layout_margin="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/warm_prompt"/>
 
 </LinearLayout>
