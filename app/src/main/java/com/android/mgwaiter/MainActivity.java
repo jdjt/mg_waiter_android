@@ -2,7 +2,12 @@ package com.android.mgwaiter;
 
 import android.app.Activity;
 import android.content.Context;
+
 import android.graphics.Color;
+
+
+import android.content.Intent;
+
 import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
@@ -15,6 +20,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.mgwaiter.login.LoginActivity;
 
 import com.android.mgwaiter.net.Constant;
 import com.android.mgwaiter.net.ReqCallBack;
@@ -120,6 +128,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     //点击事件
     public void onClick(View v) {
+
         switch (v.getId()) {
             //下班
             case R.id.tv_takingoff:
@@ -338,3 +347,4 @@ class TaskingListAdapter{
     }
     }
 }
+

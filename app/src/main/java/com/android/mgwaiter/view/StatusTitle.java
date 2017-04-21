@@ -14,17 +14,15 @@ import com.android.mgwaiter.R;
 
 /**
  * @author hyn
- * @Description:
- * @FileName:StatusTitle
- * @Package
- * @Date 2016/9/19 15:14
+ * @ FileName:StatusTitle
+ * @ Date 2017/4/17 15:14
  */
 public class StatusTitle extends RelativeLayout implements View.OnClickListener{
-  private RelativeLayout mContainer;
-  private LinearLayout mLLCenterLeft;
-  private TextView mCenterLeftTxt;
-  private LinearLayout mLLCenterRight;
-  private TextView mCenterRightTxt;
+  private RelativeLayout action_bar_container;
+  private LinearLayout ll_action_bar_left;
+  private TextView tv_action_bar_left;
+  private LinearLayout ll_action_bar_right;
+  private TextView tv_action_bar_right;
   private ViewPager pager;
 
 
@@ -58,15 +56,15 @@ public class StatusTitle extends RelativeLayout implements View.OnClickListener{
   * */
   private void initView(Context context){
     LayoutInflater.from(context).inflate(R.layout.activity_task_title, this);
-    mContainer = (RelativeLayout) findViewById(R.id.action_bar_container);
+    action_bar_container = (RelativeLayout) findViewById(R.id.action_bar_container);
 
-    mLLCenterLeft = (LinearLayout) findViewById(R.id.action_bar_ll_center_left);
-    mLLCenterLeft.setOnClickListener(this);
-    mCenterLeftTxt = (TextView) findViewById(R.id.action_bar_center_left_txt);
+    ll_action_bar_left = (LinearLayout) findViewById(R.id.ll_action_bar_left);
+    ll_action_bar_left.setOnClickListener(this);
+    tv_action_bar_left = (TextView) findViewById(R.id.tv_action_bar_left);
 
-    mLLCenterRight = (LinearLayout) findViewById(R.id.action_bar_ll_center_right);
-    mLLCenterRight.setOnClickListener(this);
-    mCenterRightTxt = (TextView) findViewById(R.id.action_bar_center_right_txt);
+    ll_action_bar_right = (LinearLayout) findViewById(R.id.ll_action_bar_right);
+    ll_action_bar_right.setOnClickListener(this);
+    tv_action_bar_right = (TextView) findViewById(R.id.tv_action_bar_right);
 
   }
 
@@ -87,15 +85,15 @@ public class StatusTitle extends RelativeLayout implements View.OnClickListener{
     }
 
     if (isLeft){ // 左侧选中
-      mLLCenterLeft.setBackgroundResource(R.color.title_bg);
-      mCenterLeftTxt.setTextColor(getResources().getColor(R.color.black));
-      mLLCenterRight.setBackgroundResource(R.color.white);
-      mCenterRightTxt.setTextColor(getResources().getColor(R.color.black));
+      ll_action_bar_left.setBackgroundResource(R.color.title_bg);
+      tv_action_bar_left.setTextColor(getResources().getColor(R.color.white));
+      ll_action_bar_right.setBackgroundResource(R.color.gray_btn_false);
+      tv_action_bar_right.setTextColor(getResources().getColor(R.color.white));
     } else {
-      mLLCenterRight.setBackgroundResource(R.color.title_bg);
-      mCenterRightTxt.setTextColor(getResources().getColor(R.color.black));
-      mLLCenterLeft.setBackgroundResource(R.color.white);
-      mCenterLeftTxt.setTextColor(getResources().getColor(R.color.black));
+      ll_action_bar_right.setBackgroundResource(R.color.title_bg);
+      tv_action_bar_right.setTextColor(getResources().getColor(R.color.white));
+      ll_action_bar_left.setBackgroundResource(R.color.gray_btn_false);
+      tv_action_bar_left.setTextColor(getResources().getColor(R.color.white));
     }
 
     this.isCenterLeft = isLeft;
@@ -104,12 +102,12 @@ public class StatusTitle extends RelativeLayout implements View.OnClickListener{
   @Override
   public void onClick(View v) {
     switch (v.getId()){
-      case R.id.action_bar_ll_center_left: // 中心左键
+      case R.id.ll_action_bar_left: // 中心左键
         setCenterCheckedItem(true);
         onTitleListener.onCenterLeft();
         break;
 
-      case R.id.action_bar_ll_center_right: // 中心右键
+      case R.id.ll_action_bar_right: // 中心右键
         setCenterCheckedItem(false);
         onTitleListener.onCenterRight();
         break;

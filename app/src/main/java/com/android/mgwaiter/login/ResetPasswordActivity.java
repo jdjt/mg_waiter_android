@@ -10,7 +10,9 @@ import android.widget.Toast;
 import com.android.mgwaiter.R;
 
 /**
- * Created by huyanan on 2017/4/17. */
+ * Created by huyanan on 2017/4/17.
+ * 修改密码
+ * */
 
 public class ResetPasswordActivity extends AppCompatActivity{
     EditText et_set_password;

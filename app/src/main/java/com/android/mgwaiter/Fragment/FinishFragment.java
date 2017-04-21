@@ -1,46 +1,34 @@
-//package com.android.mgwaiter.Fragment;
-//
-//import android.content.Context;
-//import android.content.SharedPreferences;
-//import android.os.Bundle;
-//import android.support.v4.app.Fragment;
-//import android.util.Log;
-//import android.view.LayoutInflater;
-//import android.view.View;
-//import android.view.ViewGroup;
-//import android.widget.ExpandableListView;
-//import android.widget.RatingBar;
-//import android.widget.TextView;
-//import android.widget.Toast;
-//
-//import com.android.pc.ioc.inject.InjectHttpErr;
-//import com.android.pc.ioc.inject.InjectHttpOk;
-//import com.android.pc.ioc.internet.FastHttpHander;
-//import com.android.pc.ioc.internet.InternetConfig;
-//import com.android.pc.ioc.internet.ResponseEntity;
-//import com.android.pc.util.Handler_Inject;
-//import com.android.pc.util.Handler_Json;
-//import com.android.pc.util.Handler_Network;
-//import com.google.gson.JsonObject;
-//
-//import java.util.ArrayList;
-//import java.util.HashMap;
-//import java.util.List;
-//import java.util.Map;
-//
-//import mgwaiter.jdjt.com.R;
-//import mgwaiter.jdjt.com.adapter.MealExpandableListAdapter;
-//import mgwaiter.jdjt.com.common.Url;
-//
-//import static com.fengmap.android.FMMapSDK.getApplicationContext;
-//
-///**
-// * @author huyanan
-// * @ FileName: FinishFragment
-// * @ Date 2017/4/17
-// */
-//public class FinishFragment extends Fragment {
-//
+package com.android.mgwaiter.Fragment;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ExpandableListView;
+import android.widget.RatingBar;
+import android.widget.TextView;
+import android.widget.Toast;
+
+
+import com.android.mgwaiter.R;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+
+/**
+ * @author huyanan
+ * @ FileName: FinishFragment
+ * @ Date 2017/4/17
+ */
+public class FinishFragment extends Fragment {
+
 //    ExpandableListView tasklistview;//收缩列表选项
 //    List<String> parent = null;//列表头
 //    Map<String, List<String>> map = null;//列表详情
@@ -48,12 +36,12 @@
 //    String waiterId;
 //    private ArrayList<HashMap<String, Object>> arraylist;//任务编号列表
 //    ArrayList<HashMap<String, String>> taskArrayList = new ArrayList<HashMap<String, String>>();
-//    MealExpandableListAdapter mealExpandableListAdapter;
+////    MealExpandableListAdapter mealExpandableListAdapter;
 //
 //    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                             Bundle savedInstanceState) {
-//        View view = inflater.inflate(R.layout.task_fragment, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.task_fragment, container, false);
 //        //获取waiterId
 //        SharedPreferences sp = getActivity().getSharedPreferences("WaiterId", Context.MODE_PRIVATE);
 //        waiterId = sp.getString("waiterId", "");
@@ -101,8 +89,8 @@
 //        TextView action_bar_center_left_txt = (TextView)getActivity().findViewById(R.id.action_bar_center_left_txt);
 //        action_bar_center_left_txt.setText("已完成"+listItemFinish);
 //
-//        return view;
-//    }
+        return view;
+    }
 //
 //    /**
 //     * 初始化任务列表数据
@@ -196,4 +184,4 @@
 //    public void setRating (float rating){
 //
 //    }
-//}
+}

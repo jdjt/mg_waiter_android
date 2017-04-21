@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
-    <string name="warm_prompt">温馨提示：忘记密码，请联系管理员重置密码</string>
+    <string name="warm_prompt">温馨提示：首次登录请输入初始密码，登录后需修改密码；如果忘记密码，请联系管理员重置密码</string>
 
 </resources>
