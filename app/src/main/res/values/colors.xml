@@ -14,6 +14,7 @@
     <color name="app_theme_color">#eeee5505</color>
     <color name="app_bar_text_color">#565656</color>
     <color name="divider_view_color">#ADABA9</color>
+    <color name="title_bkg_color">#25a3f5</color>
     <color name="text">#a9a9a9</color>
     <!---->
 
@@ -235,4 +236,8 @@
     <color name="material_deep_teal_50">#ff009688</color>
     <color name="blue_btn_bg_color">#AEDEF4</color>
     <color name="error_stroke_color">#F27474</color>
+    <color name="btn_tasking_color">#898989</color>
+    <color name="list_tasking_color">#f2f2f2</color>
+    <color name="btn_start_color">#009900</color>
+    <color name="btn_tasking_color1">#898989</color>
 </resources>

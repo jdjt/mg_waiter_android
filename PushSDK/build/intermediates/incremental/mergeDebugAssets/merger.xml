@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="D:\mg_waiter_android\PushSDK\assets"/><source path="D:\mg_waiter_android\PushSDK\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="D:\mg_waiter_android\PushSDK\build-types\debug\assets"/></dataSet></merger>

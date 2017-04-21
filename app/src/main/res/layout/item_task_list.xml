@@ -2,24 +2,24 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:descendantFocusability="afterDescendants"
     >
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@mipmap/taskitembackgrd"
-    android:layout_marginTop="20dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp">
+    android:background="@drawable/order_bkg"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true">
     <Button
-        android:layout_width="90dp"
-        android:layout_height="60dp"
-        android:background="@mipmap/buttonbackgrd"
+        android:layout_width="84dp"
+        android:layout_height="37dp"
+        android:background="@drawable/work_state_btn"
         android:text="抢单"
         android:textColor="@color/colorwhite"
-        android:textSize="20sp"
+        android:textSize="17sp"
         android:layout_alignParentRight="true"
-        android:id="@+id/bt_single"
-        android:layout_marginTop="10dp"
+        android:id="@+id/item_bt_single"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="10dp"
         />
         <LinearLayout
@@ -33,21 +33,21 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="客人姓名:"
-    android:layout_marginLeft="10dp"
-    android:textSize="18sp"/>
+    android:layout_marginLeft="8dp"
+    android:textSize="16sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="王二"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="8dp"
                 android:id="@+id/tv_item_name"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="14dp"
             android:id="@+id/ll_number"
             android:layout_below="@+id/ll_name"
             >
@@ -55,21 +55,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="房间号码:"
-                android:layout_marginLeft="10dp"
-                android:textSize="18sp"/>
+                android:layout_marginLeft="8dp"
+                android:textSize="16sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="椰林酒店-16001"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="8dp"
                 android:id="@+id/tv_item_number"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="14dp"
             android:id="@+id/ll_region"
             android:layout_below="@+id/ll_number"
             >
@@ -77,21 +77,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="呼叫区域:"
-                android:layout_marginLeft="10dp"
-                android:textSize="18sp"/>
+                android:layout_marginLeft="8dp"
+                android:textSize="16sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="椰林酒店"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="8dp"
                 android:id="@+id/tv_item_call_region"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="14dp"
             android:id="@+id/ll_content"
             android:layout_below="@+id/ll_region"
             >
@@ -99,21 +99,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="呼叫内容:"
-                android:layout_marginLeft="10dp"
-                android:textSize="18sp"/>
+                android:layout_marginLeft="8dp"
+                android:textSize="16sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="您好，我需要打扫房间"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="8dp"
                 android:id="@+id/tv_item_call_content"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="14dp"
             android:id="@+id/ll_time"
             android:layout_below="@+id/ll_content"
             >
@@ -121,16 +121,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="下单时间:"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="10dp"
-                android:textSize="18sp"/>
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="16sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2017-03-15 12:01:55"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="8dp"
                 android:id="@+id/tv_item_ordertime"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
         </LinearLayout>
 </RelativeLayout>
 </RelativeLayout>

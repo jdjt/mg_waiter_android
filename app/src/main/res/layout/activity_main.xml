@@ -6,45 +6,42 @@
     >
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/title_bkg_color">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="红树林服务端"
+            android:textColor="@color/white"
+            android:padding="10dp"
             android:layout_centerInParent="true"
-            android:textSize="25sp"
-            android:layout_margin="10dp"/>
+            android:textSize="20sp"
+/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tv_takingoff"
             android:text="下班"
             android:layout_centerInParent="true"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:layout_alignParentLeft="true"
-            android:layout_margin="10dp"
-            android:textColor="@color/colorgreen"/>
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/white"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tv_count"
             android:text="统计"
             android:layout_centerInParent="true"
-            android:textSize="20sp"
+            android:textSize="17sp"
             android:layout_alignParentRight="true"
-            android:layout_margin="10dp"
-            android:textColor="@color/colorgreen"/>
+            android:layout_marginRight="8dp"
+            android:textColor="@color/white"/>
     </RelativeLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorgrey"
-        >
-    </View>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp">
+        android:layout_marginTop="28dp">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,16 +51,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="上班时长"
-                android:textSize="20sp"
-                android:layout_marginRight="10dp"/>
-            <TextView
+                android:textSize="17sp"
+                android:layout_marginRight="15dp"/>
+
+            <com.android.mgwaiter.view.Tasktimer
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="00: 00: 00"
-                android:textColor="@color/colorblack"
-                android:textSize="25sp"
-                android:id="@+id/tv_worktime"
-                android:layout_marginRight="10dp"/>
+                android:text="00:00:00"
+                android:textSize="21sp"
+                android:textColor="@color/title_bkg_color"
+                android:id="@+id/tv_worktimestart"
+               />
         </LinearLayout>
     </RelativeLayout>
     <View
@@ -78,19 +76,17 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:layout_marginTop="10dp">
-
+        android:layout_height="121dp">
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="120dp"
-            android:layout_marginLeft="20dp"
+            android:layout_height="121dp"
+            android:layout_marginLeft="8dp"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="14dp"
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
@@ -98,21 +94,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="工号:"
-                    android:textSize="20sp" />
+                    android:layout_marginTop="24dp"
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="8dp"
                     android:text="T001"
+                    android:layout_marginTop="24dp"
                     android:id="@+id/tv_master_number"
-                    android:textSize="20sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="14dp"
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
@@ -120,260 +118,257 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="姓名:"
-                    android:textSize="20sp" />
+                    android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="8dp"
                     android:text="服务员02"
                     android:id="@+id/tv_master_name"
-                    android:textSize="20sp" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="所属部门:"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="8dp"
                     android:text="客房部"
-                    android:textSize="20sp"
+                    android:textSize="16sp"
                     android:id="@+id/tv_master_division"
                     />
             </LinearLayout>
         </LinearLayout>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="125dp"
+            android:layout_height="43dp"
             android:id="@+id/bt_work_state"
-            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_marginBottom="10dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="24dp"
             android:background="@drawable/work_state_btn"
-            android:paddingBottom="10dp"
-            android:paddingLeft="30dp"
-            android:paddingRight="30dp"
-            android:paddingTop="10dp"
             android:text="开始接单"
             android:textColor="@color/colorwhite"
-            android:textSize="20sp" />
+            android:textSize="19sp" />
     </RelativeLayout>
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="49dp"
         android:text="进行中的任务(0)"
-        android:padding="15dp"
-        android:textSize="20sp"
+        android:textSize="19sp"
         android:gravity="center"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="24dp"
         android:id="@+id/bt_tasking"
+        android:background="@color/btn_tasking_color"
         />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_layout_bottom"
+    android:visibility="gone"
+    >
 
-    <LinearLayout
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="49dp"
         android:orientation="horizontal"
         android:background="#e7e7e7"
-        android:id="@+id/ll_task_time"
-        android:padding="5dp"
-        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
         >
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="49dp"
             >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="服务时长"
-                android:textSize="20sp"
-                android:layout_marginRight="10dp"
+                android:textSize="17sp"
+                android:layout_marginRight="8dp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="10dp"/>
-            <TextView
+                android:layout_marginLeft="8dp"/>
+            <com.android.mgwaiter.view.Tasktimer
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="00:00:00"
-                android:textColor="@color/colorblack"
-                android:textSize="25sp"
+                android:textColor="@color/title_bkg_color"
+                android:textSize="21sp"
                 android:id="@+id/tv_service_time"
+
                 android:layout_gravity="center_vertical"
-                android:layout_marginRight="10dp"/>
+             />
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
+
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
                 android:src="@mipmap/record"
-                android:layout_gravity="clip_vertical"
                 android:id="@+id/iv_record"
                 android:scaleType="fitXY"
-                android:layout_marginLeft="20dp"
-                android:layout_weight="1"/>
+                android:layout_toLeftOf="@+id/iv_message"
+                android:layout_marginRight="19dp"
+                android:layout_marginTop="9dp"
+             />
             <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
                 android:src="@mipmap/message"
-                android:layout_gravity="clip_vertical"
                 android:scaleType="fitXY"
                 android:id="@+id/iv_message"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_weight="1"/>
-        </LinearLayout>
-    </LinearLayout>
-    <RelativeLayout
+                android:layout_marginRight="24dp"
+                android:layout_marginTop="9dp"
+                android:layout_alignParentRight="true"
+                />
+    </RelativeLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@mipmap/taskitembackgrd"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:visibility="gone"
-        android:id="@+id/rl_taskcontent">
+        android:background="@drawable/order_bkg"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:id="@+id/ll_name"
+            android:layout_marginTop="19dp"
             >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="客人姓名:"
-                android:layout_marginLeft="10dp"
-                android:textSize="18sp"/>
+                android:layout_marginLeft="8dp"
+                android:textSize="16sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="王二"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="8dp"
                 android:id="@+id/tv_name"
-                android:textSize="15sp"/>
+                android:textSize="16sp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="5dp"
-            android:id="@+id/ll_number"
-            android:layout_below="@+id/ll_name"
+            android:layout_marginTop="14dp"
             >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="房间号码:"
-                android:layout_marginLeft="10dp"
-                android:textSize="18sp"/>
+                android:layout_marginLeft="8dp"
+                android:textSize="16sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="椰林酒店-16001"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="8dp"
                 android:id="@+id/tv_number"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="5dp"
-            android:id="@+id/ll_region"
-            android:layout_below="@+id/ll_number"
+            android:layout_marginTop="14dp"
             >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="呼叫区域:"
-                android:layout_marginLeft="10dp"
-                android:textSize="18sp"/>
+                android:layout_marginLeft="8dp"
+                android:textSize="16sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="椰林酒店"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="8dp"
                 android:id="@+id/tv_call_region"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="5dp"
-            android:id="@+id/ll_content"
-            android:layout_below="@+id/ll_region"
+            android:layout_marginTop="14dp"
             >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="呼叫内容:"
-                android:layout_marginLeft="10dp"
-                android:textSize="18sp"/>
+                android:layout_marginLeft="8dp"
+                android:textSize="16sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="您好，我需要打扫房间"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="8dp"
                 android:id="@+id/tv_call_content"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="5dp"
-            android:id="@+id/ll_time"
-            android:layout_below="@+id/ll_content"
+            android:layout_marginTop="14dp"
             >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="下单时间:"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="10dp"
-                android:textSize="18sp"/>
+                android:layout_marginLeft="8dp"
+                android:textSize="16sp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2017-03-15 12:01:55"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="8dp"
                 android:id="@+id/tv_ordertime"
-                android:textSize="18sp"/>
+                android:textSize="16sp"/>
         </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="49dp"
         android:text="完成"
-        android:visibility="gone"
         android:textSize="20sp"
         android:gravity="center"
         android:id="@+id/bt_end"
-        android:background="@mipmap/btbagrd"
-        android:layout_margin="5dp"
+        android:background="@drawable/work_state_btn"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="10dp"
         />
+</LinearLayout>
     <android.support.v4.widget.SwipeRefreshLayout
         android:id="@+id/sl_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/list_tasking_color"
         >
 
         <ListView
