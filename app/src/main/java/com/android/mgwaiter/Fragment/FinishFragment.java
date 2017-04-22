@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -29,7 +30,8 @@ import java.util.Map;
  */
 public class FinishFragment extends Fragment {
 
-//    ExpandableListView tasklistview;//收缩列表选项
+    ExpandableListView tasklistview;//收缩列表选项
+
 //    List<String> parent = null;//列表头
 //    Map<String, List<String>> map = null;//列表详情
 //    RatingBar ratingBar;
@@ -42,13 +44,16 @@ public class FinishFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.task_fragment, container, false);
+
+
+
 //        //获取waiterId
 //        SharedPreferences sp = getActivity().getSharedPreferences("WaiterId", Context.MODE_PRIVATE);
 //        waiterId = sp.getString("waiterId", "");
 //
 //        arraylist = new ArrayList<HashMap<String, Object>>();
 //        //已结束任务 收缩列表选项
-//        tasklistview = (ExpandableListView) view.findViewById(R.id.task_expandablelistview);
+        tasklistview = (ExpandableListView) view.findViewById(R.id.task_expandablelistview);
 //        ratingBar = (RatingBar) view.findViewById(R.id.ratingBar);
 //        getWaiterTaskStatic();
 ////        ratingBar.setFocusable(false);
@@ -91,6 +96,12 @@ public class FinishFragment extends Fragment {
 //
         return view;
     }
+
+
+
+
+
+
 //
 //    /**
 //     * 初始化任务列表数据

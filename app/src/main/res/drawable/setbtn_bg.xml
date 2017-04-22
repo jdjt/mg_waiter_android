@@ -3,25 +3,25 @@
 
     <item android:state_focused="true">
                 <shape>
-                    <corners android:radius="8.0dip" />
+                    <corners android:radius="3.0dip" />
                     <solid android:color="@color/text" />
                 </shape>
             </item>
         <item android:state_pressed="true">
             <shape>
-                <corners android:radius="8.0dip" />
+                <corners android:radius="3.0dip" />
                 <solid android:color="@color/text" />
             </shape>
         </item>
         <item android:state_selected="true">
             <shape>
-                <corners android:radius="8.0dip" />
+                <corners android:radius="3.0dip" />
                 <solid android:color="@color/title_bg" />
             </shape>
         </item>
         <item>
             <shape>
-                <corners android:radius="8.0dip" />
+                <corners android:radius="3.0dip" />
                 <solid android:color="@color/title_bg" />
             </shape>
         </item>

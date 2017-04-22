@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -167,16 +168,63 @@
         </LinearLayout>
     </LinearLayout>
     <!--           fragment          -->
-    <com.android.mgwaiter.view.StatusTitle
-        android:id="@+id/status_title"
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tb_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:tabBackground="@drawable/tab_seleted_bg"
+        app:tabIndicatorHeight="0dp"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextAppearance="@style/tabLayoutTextStyle"
+        app:tabTextColor="@color/white"></android.support.design.widget.TabLayout>
 
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_all"
+            style="@style/radio_style_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:checked="true"
+            android:text="全部（0）"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_autonomously"
+            style="@style/radio_style_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:checked="false"
+            android:text="自主接单（10）"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_system"
+            style="@style/radio_style_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:checked="false"
+            android:text="管理员派单（10）"
+             />
+
+    </RadioGroup>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent" />
 </LinearLayout>

@@ -33,4 +33,15 @@
         <item name="android:textSize">@dimen/textsize_32</item>
     </style>
 
+    <style name="tabLayoutTextStyle">
+        <item name="android:textSize">@dimen/textsize_32</item>
+    </style>
+
+    <style name="radio_style_right">
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/radiobtn_selected</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@drawable/radiobtn_selected_text</item>
+        <item name="android:padding">@dimen/appbar_padding_top</item>
+    </style>
 </resources>
