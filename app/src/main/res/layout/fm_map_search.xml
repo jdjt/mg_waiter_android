@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <TextView
+            android:drawableTop="@mipmap/fm_search_food"
+            android:id="@+id/fm_search_food"
+            android:gravity="center"
+            android:text="美食"
+            android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"/>
+
+        <TextView
+            android:drawableTop="@mipmap/fm_search_hotel"
+            android:text="酒店"
+            android:gravity="center"
+            android:id="@+id/fm_search_hotel"
+            android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:drawableTop="@mipmap/fm_search_shopping"
+            android:text="购物"
+            android:gravity="center"
+            android:id="@+id/fm_search_shopping"
+            android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:drawableTop="@mipmap/fm_search_park"
+            android:id="@+id/fm_search_park"
+            android:text="休闲"
+            android:gravity="center"
+            android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <TextView
+            android:drawableTop="@mipmap/fm_search_serve"
+            android:text="服务"
+            android:gravity="center"
+            android:id="@+id/fm_search_serve"
+            android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:drawableTop="@mipmap/fm_search_wc"
+            android:text="卫生间"
+            android:gravity="center"
+            android:id="@+id/fm_search_wc"
+            android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:drawableTop="@mipmap/fm_search_atm"
+            android:text="ATM"
+            android:gravity="center"
+            android:id="@+id/fm_search_atm"
+            android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:drawableTop="@mipmap/fm_search_ele"
+            android:text="直梯"
+            android:gravity="center"
+            android:id="@+id/fm_search_ele"
+            android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+    <View
+        android:background="@color/color_divider"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+    <ListView
+        android:layout_gravity="center"
+        android:id="@+id/fm_search_history_list"
+        android:divider="@color/color_divider"
+        android:dividerHeight="0.5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

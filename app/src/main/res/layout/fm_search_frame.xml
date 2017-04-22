@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:background="@color/filter_bg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/fm_search_back"
+            android:layout_alignParentLeft="true"
+            android:src="@mipmap/fm_back"
+            android:scaleType="centerInside"
+            android:layout_centerVertical="true"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"/>
+
+        <EditText
+            android:hint="搜索"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:paddingLeft="10dp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@mipmap/fm_search"
+            android:drawablePadding="10dp"
+            android:background="@drawable/fm_white_circle_shadow_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/fm_search_back"
+            android:layout_toLeftOf="@+id/fm_search_image"
+            android:layout_centerVertical="true"
+            android:id="@+id/fm_search_processing"/>
+
+        <ImageView
+            android:id="@+id/fm_search_delete"
+            android:layout_alignRight="@+id/fm_search_processing"
+            android:src="@mipmap/fm_search_delete"
+            android:layout_marginRight="3dp"
+            android:scaleType="centerInside"
+            android:layout_centerVertical="true"
+            android:layout_width="35dp"
+            android:layout_height="35dp"/>
+
+        <View
+            android:id="@+id/fm_search_image"
+            android:layout_alignParentRight="true"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+</merge>

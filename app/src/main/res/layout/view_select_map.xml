@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:background="@drawable/fm_half_green"
+        android:text="选择地图"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_centerVertical="true"/>
+
+
+    <ListView
+        android:layout_gravity="center"
+        android:id="@+id/fm_search_select_map_list"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@color/color_divider"
+        android:dividerHeight="0.5dp"
+        android:minHeight="182dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

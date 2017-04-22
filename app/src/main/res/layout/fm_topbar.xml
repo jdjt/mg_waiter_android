@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/fm_topbar_back"
+        android:layout_alignParentLeft="true"
+        android:src="@mipmap/fm_back"
+        android:scaleType="centerInside"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:text="三亚"
+        android:textSize="20sp"
+        android:id="@+id/fm_topbar_title"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@+id/fm_topbar_back"
+        android:layout_toLeftOf="@+id/fm_topbar_search"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/fm_topbar_search"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/icon_searcher_white"
+        android:scaleType="centerInside"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"/>
+
+
+</merge>

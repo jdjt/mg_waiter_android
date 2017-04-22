@@ -1,5 +1,13 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="warm_prompt">温馨提示：首次登录请输入初始密码，登录后需修改密码；如果忘记密码，请联系管理员重置密码</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 
+    <string-array name="ButtonFuction">
+        <item>导航</item>
+        <item>定位</item>
+        <item>休闲线1</item>
+        <item>美食线1</item>
+    </string-array>
 </resources>

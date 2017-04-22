@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/fm_bottombar_divide"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/green"
+        android:layout_above="@+id/fm_bottombar"/>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="47dp">
+
+        <TextView
+            android:id="@+id/fm_bottombar_room"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="客房预订"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/fm_bottombar_guide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="红树林导游"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/fm_bottombar_serve"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="酒店服务"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</merge>

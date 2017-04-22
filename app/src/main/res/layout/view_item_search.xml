@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:background="@color/white"
+              android:layout_width="match_parent"
+              android:layout_height="60dp">
+
+
+    <ImageView
+        android:id="@+id/fm_search_item_left_marker"
+        android:src="@mipmap/fm_search_pos"
+        android:scaleType="centerInside"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"/>
+
+
+    <RelativeLayout
+        android:id="@+id/fm_search_item_rl"
+        android:layout_weight="1.0"
+        android:layout_width="0dp"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="大王棕酒店"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            android:id="@+id/fm_search_item_name"/>
+
+        <TextView
+            android:text="餐厅"
+            android:layout_below="@+id/fm_search_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#666666"
+            android:textSize="11sp"
+            android:layout_marginTop="2dp"
+            android:id="@+id/fm_search_item_type"/>
+
+        <TextView
+            android:text="･大王棕酒店三层"
+            android:layout_alignBottom="@+id/fm_search_item_type"
+            android:layout_toRightOf="@+id/fm_search_item_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#999999"
+            android:textSize="11sp"
+            android:layout_marginTop="2dp"
+            android:id="@+id/fm_search_item_address"/>
+
+
+    </RelativeLayout>
+
+
+    <com.fengmap.drpeng.widget.DrawableCenterTextView
+        android:id="@+id/fm_search_item_right_marker"
+        android:drawableTop="@mipmap/fm_search_navigation"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:text="去这里"
+        android:textColor="#999999"
+        android:textSize="11dp"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

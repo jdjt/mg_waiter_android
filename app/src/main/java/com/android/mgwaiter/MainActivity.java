@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.mgwaiter.login.LoginActivity;
+import com.fengmap.drpeng.MapMainActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -90,6 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                  break;
              //接单
              case R.id.bt_work_state:
+                 openMap();
                  break;
              //完成
              case R.id.bt_end:
@@ -100,5 +102,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this,TaskStatisticsActivity.class));
                  break;
          }
+    }
+
+
+    //打开地图
+    private void openMap() {
+        startActivity(new Intent(this, MapMainActivity.class));
     }
 }

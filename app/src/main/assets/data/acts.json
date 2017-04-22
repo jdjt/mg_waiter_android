@@ -1,0 +1,513 @@
+{
+    "activity_list":
+    [
+        {
+          "activity_code": "1",
+          "activity_name": "亿航",
+          "zone_code": "001",
+          "fmap_fid": "999800127",
+          "fmap_position": []
+        },
+        {
+          "activity_code": "2",
+          "activity_name": "CRZ",
+          "zone_code": "001",
+          "fmap_fid": "999800127",
+          "fmap_position": []
+        },
+        {
+          "activity_code": "3",
+          "activity_name": "Mothercare",
+          "zone_code": "001",
+          "fmap_fid": "999800127",
+          "fmap_position": []
+        },
+        {
+          "activity_code": "4",
+          "activity_name": "H&M",
+          "zone_code": "001",
+          "fmap_fid": "999800127",
+          "fmap_position": []
+        },
+        {
+          "activity_code": "5",
+          "activity_name": "Beach style",
+          "zone_code": "001",
+          "fmap_fid": "999800128",
+          "fmap_position": []
+        },
+        {
+          "activity_code": "6",
+          "activity_name": "水生活馆",
+          "zone_code": "001",
+          "fmap_fid": "999800128",
+          "fmap_position": []
+        },
+        {
+          "activity_code": "7",
+          "activity_name": "o'neal",
+          "zone_code": "001",
+          "fmap_fid": "999800128",
+          "fmap_position": []
+        },
+        {
+          "activity_code": "8",
+          "activity_name": "巴西烤肉",
+          "zone_code": "001",
+          "fmap_fid": "999800128",
+          "fmap_position": []
+        },
+        {
+          "activity_code": "9",
+          "activity_name": "BOWIECARLO",
+          "zone_code": "001",
+          "fmap_fid": "999800131",
+          "fmap_position": []
+        },
+        {
+        "activity_code": "10",
+        "zone_code": "001",
+        "fmap_fid": "999800131",
+        "model_name": "菩提酒店",
+        "activity_name": "聚雅阁黄花梨",
+        "fmap_position": []
+        },
+        {
+          "activity_code": "11",
+          "activity_name": "菩提游泳池",
+          "zone_code": "001",
+          "fmap_fid": "999800131",
+          "fmap_position": []
+        },
+        {
+          "activity_code": "12",
+          "activity_name": "菩提中餐厅",
+          "zone_code": "001",
+          "fmap_fid": "999800131",
+          "fmap_position": []
+        },
+        {
+        "activity_code": "13",
+        "zone_code": "001",
+        "fmap_fid": "999800131",
+        "activity_name": "菩提珍珠吧",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "14",
+        "zone_code": "001",
+        "fmap_fid": "99980011",
+        "activity_name": "沙滩文化",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "15",
+        "zone_code": "001",
+        "fmap_fid": "99980011",
+        "activity_name": "健身房",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "16",
+        "zone_code": "001",
+        "fmap_fid": "99980011",
+        "activity_name": "木棉餐厅",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "17",
+        "zone_code": "001",
+        "fmap_fid": "999800125",
+        "activity_name": "会议中心",
+        "fmap_position": [
+                              12188009,
+                              2071207.375
+                              ]
+        },
+        {
+        "activity_code": "18",
+        "zone_code": "001",
+        "fmap_fid": "999800125",
+        "activity_name": "国际影城",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "19",
+        "zone_code": "001",
+        "fmap_fid": "999800125",
+        "activity_name": "探险王国",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "20",
+        "zone_code": "001",
+        "fmap_fid": "999800126",
+        "activity_name": "绍兴小馆",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "21",
+        "zone_code": "001",
+        "fmap_fid": "999800126",
+        "activity_name": "墨西哥餐吧",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "22",
+        "zone_code": "001",
+        "fmap_fid": "999800126",
+        "activity_name": "老上海餐吧",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "23",
+        "zone_code": "001",
+        "fmap_fid": "999800126",
+        "activity_name": "红磨坊餐厅",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "24",
+        "zone_code": "001",
+        "fmap_fid": "999800126",
+        "activity_name": "大粮仓",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "25",
+        "zone_code": "001",
+        "fmap_fid": "999800130",
+        "activity_name": "UP+精品超市",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "26",
+        "zone_code": "001",
+        "fmap_fid": "999800130",
+        "activity_name": "皇后棕游泳池",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "27",
+        "zone_code": "001",
+        "fmap_fid": "999800130",
+        "activity_name": "大王棕餐厅",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "28",
+        "zone_code": "001",
+        "fmap_fid": "999800131",
+        "activity_name": "艺术汇",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "29",
+        "zone_code": "001",
+        "fmap_fid": "999800131",
+        "activity_name": "潘维曼Spa",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "30",
+        "zone_code": "001",
+        "fmap_fid": "99980012",
+        "activity_name": "木棉游泳池",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "31",
+        "zone_code": "001",
+        "fmap_fid": "99980012",
+        "activity_name": "棋牌室",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "32",
+        "zone_code": "001",
+        "fmap_fid": "99980012",
+        "activity_name": "木棉珊瑚吧",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "33",
+        "zone_code": "001",
+        "fmap_fid": "999800119",
+        "activity_name": "水乐园",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "34",
+        "zone_code": "001",
+        "fmap_fid": "999800120",
+        "activity_name": "水乐园",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "35",
+        "zone_code": "001",
+        "fmap_fid": "999800158",
+        "activity_name": "水乐园",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "36",
+        "zone_code": "001",
+        "fmap_fid": "999800163",
+        "activity_name": "水乐园",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "37",
+        "zone_code": "001",
+        "fmap_fid": "999800166",
+        "activity_name": "水乐园",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "38",
+        "zone_code": "001",
+        "fmap_fid": "999800167",
+        "activity_name": "水乐园",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "39",
+        "zone_code": "001",
+        "fmap_fid": "999800168",
+        "activity_name": "水乐园",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "40",
+        "zone_code": "001",
+        "fmap_fid": "999800169",
+        "activity_name": "水乐园",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "41",
+        "zone_code": "001",
+        "fmap_fid": "999800170",
+        "activity_name": "水乐园",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "42",
+        "zone_code": "001",
+        "fmap_fid": "999800171",
+        "activity_name": "水乐园",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "43",
+        "zone_code": "001",
+        "fmap_fid": "999800181",
+        "activity_name": "水乐园",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "44",
+        "zone_code": "001",
+        "fmap_fid": "999800182",
+        "activity_name": "水乐园",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "45",
+        "zone_code": "001",
+        "fmap_fid": "999800164",
+        "activity_name": "水乐园",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "46",
+        "zone_code": "001",
+        "fmap_fid": "999800165",
+        "activity_name": "水乐园",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "47",
+        "zone_code": "001",
+        "fmap_fid": "999800162",
+        "activity_name": "水乐园",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "48",
+        "zone_code": "001",
+        "fmap_fid": "999800160",
+        "activity_name": "水乐园",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "49",
+        "zone_code": "001",
+        "fmap_fid": "999800161",
+        "activity_name": "水乐园",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "50",
+        "zone_code": "001",
+        "fmap_fid": "999800159",
+        "activity_name": "水乐园",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "51",
+        "zone_code": "001",
+        "fmap_fid": "999800118",
+        "activity_name": "水乐园",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "52",
+        "zone_code": "001",
+        "fmap_fid": "999800126",
+        "activity_name": "椰林游泳池",
+        "fmap_position": []
+        },
+        {
+        "activity_code": "53",
+        "zone_code": "001",
+        "fmap_fid": "999800129",
+        "activity_name": "临风吧",
+        "fmap_position": [
+                              12188393,
+                              2071301.75
+                              ]
+        },
+        {
+          "activity_code": "54",
+          "activity_name": "国际影城",
+          "zone_code": "001",
+          "fmap_fid": "999800126",
+          "fmap_position": [
+                              12188064,
+                              2071274.375
+                           ]
+        },
+        {
+          "activity_code": "55",
+          "activity_name": "骑士部落",
+          "zone_code": "001",
+          "fmap_fid": "999800126",
+          "fmap_position": [
+                              12188058,
+                              2071182.125
+                           ]
+        },
+        {
+          "activity_code": "56",
+          "activity_name": "纳咪日本料理",
+          "zone_code": "001",
+          "fmap_fid": "999800162",
+          "fmap_position": [
+                              12188130,
+                              2071230.5
+                           ]
+        },
+        {
+          "activity_code": "57",
+          "activity_name": "丽江小街",
+          "zone_code": "001",
+          "fmap_fid": "999800161",
+          "fmap_position": [
+                              12188154,
+                              2071206.625
+                           ]
+        },
+        {
+          "activity_code": "58",
+          "activity_name": "柳鶯亭",
+          "zone_code": "001",
+          "fmap_fid": "999800172",
+          "fmap_position": [
+                              12188191,
+                              2071256
+                           ]
+        },
+        {
+          "activity_code": "59",
+          "activity_name": "汉拿山",
+          "zone_code": "001",
+          "fmap_fid": "999800157",
+          "fmap_position": [
+                              12188225,
+                              2071253.875
+                           ]
+        },
+        {
+          "activity_code": "60",
+          "activity_name": "湘聚",
+          "zone_code": "001",
+          "fmap_fid": "999800152",
+          "fmap_position": [
+                              12188343,
+                              2071203.125
+                           ]
+        },
+        {
+          "activity_code": "61",
+          "activity_name": "意面工坊",
+          "zone_code": "001",
+          "fmap_fid": "999800147",
+          "fmap_position": [
+                              12188330,
+                              2071165.75
+                           ]
+        },
+        {
+          "activity_code": "62",
+          "activity_name": "皇后广场",
+          "zone_code": "001",
+          "fmap_fid": "999800177",
+          "fmap_position": [
+                                12187879,
+                                2071341.625
+                           ]
+        },
+        {
+          "activity_code": "63",
+          "activity_name": "VERO MODA",
+          "zone_code": "001",
+          "fmap_fid": "999800128",
+          "fmap_position": [
+                              12188138,
+                              2071218.5
+                           ]
+        },
+        {
+          "activity_code": "64",
+          "activity_name": "SELECTED",
+          "zone_code": "001",
+          "fmap_fid": "999800128",
+          "fmap_position": [
+                                12188244,
+                                2071257.5
+                           ]
+        },
+        {
+          "activity_code": "65",
+          "activity_name": "JACK&JONES",
+          "zone_code": "001",
+          "fmap_fid": "999800128",
+          "fmap_position": [
+                                12188353.0,
+                                2071252.375
+                           ]
+        },
+        {
+          "activity_code": "66",
+          "activity_name": "H&M",
+          "zone_code": "001",
+          "fmap_fid": "999800126",
+          "fmap_position": [
+                                12188108,
+                                2071221.625
+                           ]
+        }
+    ]
+}

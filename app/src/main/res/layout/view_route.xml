@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:src="@mipmap/fm_left_normal"
+            android:scaleType="centerInside"
+            android:id="@+id/fm_route_left"
+            android:layout_gravity="center_vertical"
+            android:layout_width="16dp"
+            android:layout_height="match_parent"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fm_route_list"
+            android:layout_weight="1.0"
+            android:layout_gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="36dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+        <ImageView
+            android:src="@mipmap/fm_right_normal"
+            android:id="@+id/fm_route_right"
+            android:scaleType="centerInside"
+            android:layout_gravity="center_vertical"
+            android:layout_width="16dp"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:background="@color/color_divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@mipmap/fm_left_normal"
+            android:scaleType="centerInside"
+            android:id="@+id/fm_route_work_left"
+            android:layout_gravity="center_vertical"
+            android:layout_width="16dp"
+            android:layout_height="match_parent" />
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:scrollbars="none"
+            android:fillViewport="true"
+            android:layout_weight="1.0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:background="@color/filter_bg"
+                    android:id="@+id/fm_route_work_line"
+                    android:layout_width="match_parent"
+                    android:layout_alignRight="@+id/fm_work_list"
+                    android:layout_height="4dp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/fm_work_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+        <ImageView
+            android:src="@mipmap/fm_right_normal"
+            android:id="@+id/fm_route_work_right"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerInside"
+            android:layout_width="16dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

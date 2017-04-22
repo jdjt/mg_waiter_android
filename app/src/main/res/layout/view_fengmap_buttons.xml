@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" android:orientation="vertical">
+
+    <com.fengmap.drpeng.widget.DrawableCenterTextView
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:textSize="12sp"
+        android:id="@+id/fm_bt_facility"
+        android:drawableTop="@mipmap/facility"
+        android:gravity="center"
+        android:background="@drawable/fm_green_normal_button"
+        android:textColor="#70ffffff"
+        android:drawablePadding="2dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="设备"/>
+
+    <com.fengmap.drpeng.widget.DrawableCenterTextView
+        android:text="购物"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="2dp"
+        android:textSize="12sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:gravity="center"
+        android:drawableTop="@mipmap/shop"
+        android:background="@drawable/fm_green_normal_button"
+        android:textColor="#70ffffff"
+        android:id="@+id/fm_bt_shop"/>
+
+    <com.fengmap.drpeng.widget.DrawableCenterTextView
+        android:text="美食"
+        android:layout_marginTop="10dp"
+        android:drawablePadding="2dp"
+        android:textSize="12sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:gravity="center"
+        android:drawableTop="@mipmap/food"
+        android:background="@drawable/fm_green_normal_button"
+        android:textColor="#70ffffff"
+        android:id="@+id/fm_bt_food"/>
+
+</LinearLayout>

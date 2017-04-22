@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_marginLeft="4dp"
+                android:layout_marginBottom="4dp"
+              android:layout_width="wrap_content"
+              android:layout_height="50dp">
+
+    <com.fengmap.drpeng.widget.DrawableCenterTextView
+        android:text="线路一"
+        android:drawableLeft="@mipmap/fm_search_loca"
+        android:background="@drawable/btn_corner_green"
+        android:id="@+id/fm_view_item_route_name"
+        android:drawablePadding="4dp"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:layout_centerVertical="true"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

@@ -33,4 +33,31 @@
         <item name="android:textSize">@dimen/textsize_32</item>
     </style>
 
+    <style name="ActionBarPopupThemeOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="PopuAnimation">
+        <item name="android:windowEnterAnimation">@anim/popu_enter</item>
+        <item name="android:windowExitAnimation">@anim/popu_exit</item>
+    </style>
+
+    <style name="PopupPullFromBottomAnimation">
+        <item name="android:windowEnterAnimation">@anim/popu_pull_enter</item>
+        <item name="android:windowExitAnimation">@anim/popu_pull_exit</item>
+    </style>
+
+    <!--Dialog-->
+    <style name="custom_dialog" parent="@android:style/Theme.Dialog">
+        <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/fm_circle_gray</item>
+        <!-- 背景是否模糊显示 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
 </resources>

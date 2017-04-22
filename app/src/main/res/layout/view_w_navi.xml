@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:background="@drawable/fm_half_white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:text="0分钟"
+            android:textColor="#333333"
+            android:id="@+id/fm_navi_need_time"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:text="0米"
+            android:id="@+id/fm_navi_need_distance"
+            android:layout_toRightOf="@+id/fm_navi_need_time"
+            android:layout_marginLeft="12dp"
+            android:textColor="#999999"
+            android:layout_alignBottom="@+id/fm_navi_need_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"/>
+
+        <com.fengmap.drpeng.widget.DrawableCenterTextView
+            android:text="燃烧0卡路里"
+            android:id="@+id/fm_navi_need_calorie"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@mipmap/fm_calorie"
+            android:drawablePadding="5dp"
+            android:textColor="#de5656"
+            android:textSize="14sp"
+            android:layout_alignBottom="@+id/fm_navi_need_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/fm_half_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_weight="1.0"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/fm_navi_start"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:drawableLeft="@mipmap/fm_w_start"
+                android:gravity="center_vertical"
+                android:text="我的位置"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:drawablePadding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <View
+                android:background="@color/color_divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+
+            <TextView
+                android:id="@+id/fm_navi_end"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="终点"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:gravity="center_vertical"
+                android:drawableLeft="@mipmap/fm_w_end"
+                android:drawablePadding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/fm_navi_exchange"
+            android:src="@mipmap/fm_w_exchange"
+            android:scaleType="centerInside"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/fm_open_navi"
+        android:text="开始导航"
+        android:background="@drawable/fm_half_green"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+</LinearLayout>

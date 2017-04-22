@@ -2,6 +2,9 @@ package com.android.mgwaiter.application;
 
 import android.app.Application;
 
+import com.fengmap.android.FMMapSDK;
+import com.fengmap.drpeng.common.ResourcesUtils;
+
 /**
  * Created by Administrator on 2017/4/20/020.
  */
@@ -17,6 +20,7 @@ public class MgApplication extends Application {
 
     @Override
     public void onCreate() {
+        FMMapSDK.init(this, ResourcesUtils.getSDPath() + "/fm_drpeng");
         super.onCreate();
         instance=this;
     }

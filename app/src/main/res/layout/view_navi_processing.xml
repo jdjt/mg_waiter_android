@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:background="@drawable/fm_half_green"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_alignParentLeft="true"
+        android:id="@+id/fm_navi_processing_image"
+        android:src="@mipmap/fm_navi_people"
+        android:scaleType="centerInside"
+        android:layout_width="70dp"
+        android:layout_height="80dp"/>
+
+    <LinearLayout
+        android:layout_toRightOf="@+id/fm_navi_processing_image"
+        android:layout_toLeftOf="@+id/fm_stop_navi_processing"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/fm_navi_processing_time"
+            android:text="10分钟"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textStyle="normal|bold"/>
+
+        <TextView
+            android:id="@+id/fm_navi_processing_shift"
+            android:text="全程还剩余100米"
+            android:textSize="14dp"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:layout_marginRight="15dp"
+        android:id="@+id/fm_stop_navi_processing"
+        android:layout_centerInParent="true"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/fm_white_circle_shadow_button"
+        android:scaleType="centerInside"
+        android:text="结束"
+        android:textColor="#3FC38D"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:textStyle="normal|bold"
+        android:textSize="18sp"/>
+
+</RelativeLayout>
