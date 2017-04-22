@@ -1,5 +1,6 @@
 package com.android.mgwaiter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -7,11 +8,13 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.android.mgwaiter.Fragment.AbolishFragment;
 import com.android.mgwaiter.Fragment.FinishFragment;
+import com.android.mgwaiter.common.CalenderActivity;
 import com.android.mgwaiter.view.StatusTitle;
 
 import java.util.ArrayList;
@@ -28,7 +31,7 @@ public class TaskStatisticsActivity extends AppCompatActivity {
     private TextView tv_date,tv_order_task,tv_miss_task,tv_general_assignment,tv_order_rate;
     private StatusTitle statusTitle;
 //    TaskAdapter adapter;
-
+    int CALENDER_REQUEST_ID=1; //日历页面跳转标示
 
     List<String> parent = null;//列表头
     Map<String, List<String>> map = null;//列表详情
@@ -39,7 +42,7 @@ public class TaskStatisticsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.task_statistics_activity);
-//        inView();
+        inView();
 //        initStatusBar();
     }
 
@@ -50,6 +53,12 @@ public class TaskStatisticsActivity extends AppCompatActivity {
         tv_miss_task = (TextView) findViewById(R.id.tv_miss_task);//未接单任务总计
         tv_general_assignment = (TextView) findViewById(R.id.tv_general_assignment);//推送总计
         tv_order_rate = (TextView) findViewById(R.id.tv_order_rate);//接单率
+        tv_order_rate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivityForResult(new Intent(TaskStatisticsActivity.this, CalenderActivity.class),CALENDER_REQUEST_ID);
+            }
+        });
 
     }
 
