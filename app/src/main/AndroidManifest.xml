@@ -9,15 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:name=".common.MyApplication">
+        android:name=".application.MgApplication">
 
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="58f58465310c93079d000aa7">
+            android:value="@string/umeng_appkey">
         </meta-data>
         <meta-data
             android:name="UMENG_MESSAGE_SECRET"
-            android:value="f08cf3f36c0454b17afff8fc49808e88">
+            android:value="@string/umeng_message_secret">
         </meta-data>
         <meta-data
             android:name="UMENG_CHANNEL"

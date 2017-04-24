@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="warm_prompt">温馨提示：首次登录请输入初始密码，登录后需修改密码；如果忘记密码，请联系管理员重置密码</string>
-
+    <string name="umeng_appkey">58f58465310c93079d000aa7</string>
+    <string name="umeng_message_secret">f08cf3f36c0454b17afff8fc49808e88</string>
 </resources>
