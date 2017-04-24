@@ -89,14 +89,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         context = this;
 
         taskingList = new ArrayList<>();
-
-        HashMap<String, String> map = new HashMap<>();
-        map.put("name", "王二");
-        map.put("number", "1000687");
-        map.put("call", "郁林酒店");
-        map.put("message", "您好，请来我这打扫一下房间");
-        map.put("time", "2017-3-6");
-        taskingList.add(map);
         app = MgApplication.getInstance();
         init();
     }
@@ -189,6 +181,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
                 switch (workingState) {
                     case 0:
+                        HashMap<String, String> map = new HashMap<>();
+                        map.put("name", "王二");
+                        map.put("number", "1000687");
+                        map.put("call", "郁林酒店");
+                        map.put("message", "您好，请来我这打扫一下房间");
+                        map.put("time", "2017-3-6");
+                        taskingList.add(map);
                         workingState = 2;
                         bt_work_state.setText("停止抢单");
                         bt_work_state.setBackgroundResource(R.drawable.work_state_end_btn);
@@ -255,6 +254,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 bt_work_state.setText("开始接单");
                 bt_work_state.setBackgroundResource(R.drawable.work_state_btn);
                 settingMasterState(workingState);
+                taskingList.clear();
+                taskingAdapter.notifyDataSetChanged();
                 dialog.cancel();
             }
         });

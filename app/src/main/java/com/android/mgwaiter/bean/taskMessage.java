@@ -27,8 +27,17 @@ public class taskMessage {
     private Date acceptTime;//接单时间
     private Date finishTime;//服务员完成时间
     private Date finishEndTime;//服务员完成截至时间
+    private long taskCode; //任务编号
     public String getTaskContent() {
         return taskContent;
+    }
+
+    public long getTaskCode() {
+        return taskCode;
+    }
+
+    public void setTaskCode(long taskCode) {
+        this.taskCode = taskCode;
     }
 
     public void setTaskContent(String taskContent) {
