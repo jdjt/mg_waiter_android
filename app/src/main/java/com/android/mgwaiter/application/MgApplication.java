@@ -23,7 +23,7 @@ public class MgApplication extends Application {
 
     @Override
     public void onCreate() {
-        FMMapSDK.init(this, ResourcesUtils.getSDPath() + "/fm_drpeng");
+        FMMapSDK.init(this, ResourcesUtils.getSDPath() + "/fmap_drpeng");
         super.onCreate();
         instance=this;
         //必须首先执行这部分代码, 如果在":TCMSSevice"进程中，无需进行云旺（OpenIM）和app业务的初始化，以节省内存;

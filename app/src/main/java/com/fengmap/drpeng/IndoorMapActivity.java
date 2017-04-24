@@ -150,13 +150,6 @@ public class IndoorMapActivity extends Activity implements OnFMMapInitListener,
     private String          mFromWhere;
 
     private FMDBMapElementDAO mMapElementDAO;
-
-    private TextView mLogTVView;
-    private TextView mAssertLogTVView;
-    private TextView mLogStatus;
-    private TextView mPing1TV;
-    private TextView mPing2TV;
-
     private String wifiStatues = "";
     private int wifiDelayTime = 0;
     private String logText = "";
@@ -187,20 +180,6 @@ public class IndoorMapActivity extends Activity implements OnFMMapInitListener,
 
         mCallView = (DrawableCenterTextView) findViewById(R.id.indoor_call);
         mCallView.setOnClickListener(this);
-
-        mLogTVView = (TextView) findViewById(R.id.fm_tv_log);
-        mLogTVView.setTextColor(Color.BLUE);
-
-        mAssertLogTVView = (TextView) findViewById(R.id.fm_tv_assert_log);
-        mAssertLogTVView.setTextColor(Color.RED);
-
-        mLogStatus = (TextView) findViewById(R.id.fm_tv_log_status);
-        mLogStatus.setTextColor(Color.MAGENTA);
-
-        mPing1TV = (TextView) findViewById(R.id.fm_tv_log_ping1);
-        mPing1TV.setTextColor(Color.CYAN);
-        mPing2TV = (TextView) findViewById(R.id.fm_tv_log_ping2);
-        mPing2TV.setTextColor(Color.GREEN);
 
         mMapView = (FMMapView) findViewById(R.id.indoor_mapview);
         mMap = mMapView.getFMMap();
@@ -429,55 +408,55 @@ public class IndoorMapActivity extends Activity implements OnFMMapInitListener,
             modelLayer.setOnFMNodeListener(new OnFMNodeListener() {
                 @Override
                 public boolean onClick(FMNode pFMNode) {
-                    if (FMAPI.instance().needFilterNavigationWhenOperation(mInstance)) {
-                        return false;
-                    }
-
-                    mCurrentModel = (FMModel) pFMNode;
-
-                    if (mLastModel != null) {
-                        mLastModel.setSelected(false);
-                    }
-
-                    mCurrentModel.setSelected(true);
-
-                    InsideModelView view = (InsideModelView) mOpenModelInfoWindow.getConvertView();
-                    String          name = mCurrentModel.getName();
-                    if (name.equals("") || name == null) {
-                        name = "暂无名称";
-                    }
-                    view.setTitle(name);
-
-                    // 查询
-                    List<FMDBMapElement> elements = mMapElementDAO.queryFid(mMap.currentMapId(), mCurrentModel.getFid());
-                    String               typeName = "";
-                    String               address  = "";
-                    if (!elements.isEmpty()) {
-                        typeName = elements.get(0).getTypename();
-                        address = elements.get(0).getAddress();
-                    }
-                    elements.clear();
-                    elements = null;
-                    String viewAddress = "";
-                    if (typeName==null || typeName.equals("")) {
-                        viewAddress = address;
-                    } else {
-                        viewAddress = String.format("%s・%s", typeName, address);
-                    }
-
-                    view.setAddress(viewAddress);
-
-                    mOpenModelInfoWindow.showAsDropDown(mMapView, 0, -mMapView.getHeight());
-
-                    mLastModel = mCurrentModel;
-
-                    mSceneAnimator.animateMoveToScreenCenter(mCurrentModel.getCenterMapCoord())
-                            .setInterpolator(new FMLinearInterpolator(FMInterpolator.STAGE_INOUT))
-                            .setDurationTime(800)
-                            .start();
-
-                    mMap.updateMap();
-                    return true;
+//                    if (FMAPI.instance().needFilterNavigationWhenOperation(mInstance)) {
+//                        return false;
+//                    }
+//
+//                    mCurrentModel = (FMModel) pFMNode;
+//
+//                    if (mLastModel != null) {
+//                        mLastModel.setSelected(false);
+//                    }
+//
+//                    mCurrentModel.setSelected(true);
+//
+//                    InsideModelView view = (InsideModelView) mOpenModelInfoWindow.getConvertView();
+//                    String          name = mCurrentModel.getName();
+//                    if (name.equals("") || name == null) {
+//                        name = "暂无名称";
+//                    }
+//                    view.setTitle(name);
+//
+//                    // 查询
+//                    List<FMDBMapElement> elements = mMapElementDAO.queryFid(mMap.currentMapId(), mCurrentModel.getFid());
+//                    String               typeName = "";
+//                    String               address  = "";
+//                    if (!elements.isEmpty()) {
+//                        typeName = elements.get(0).getTypename();
+//                        address = elements.get(0).getAddress();
+//                    }
+//                    elements.clear();
+//                    elements = null;
+//                    String viewAddress = "";
+//                    if (typeName==null || typeName.equals("")) {
+//                        viewAddress = address;
+//                    } else {
+//                        viewAddress = String.format("%s・%s", typeName, address);
+//                    }
+//
+//                    view.setAddress(viewAddress);
+//
+//                    mOpenModelInfoWindow.showAsDropDown(mMapView, 0, -mMapView.getHeight());
+//
+//                    mLastModel = mCurrentModel;
+//
+//                    mSceneAnimator.animateMoveToScreenCenter(mCurrentModel.getCenterMapCoord())
+//                            .setInterpolator(new FMLinearInterpolator(FMInterpolator.STAGE_INOUT))
+//                            .setDurationTime(800)
+//                            .start();
+//
+//                    mMap.updateMap();
+                    return false;
                 }
 
                 @Override
@@ -1020,12 +999,11 @@ public class IndoorMapActivity extends Activity implements OnFMMapInitListener,
             @Override
             public void wifiDelayTime(int pDelayTime) {
                 wifiDelayTime = pDelayTime;
-                mLogStatus.setText("WIFI: "+wifiStatues+", DelayTime: "+ wifiDelayTime);
             }
 
             @Override
             public void logText(String pText) {
-                mAssertLogTVView.setText(pText);
+
             }
         });
     }
@@ -1717,8 +1695,6 @@ public class IndoorMapActivity extends Activity implements OnFMMapInitListener,
         @Override
         public void onReceiveLocation(int type, FMTotalMapCoord lastLocation, FMTotalMapCoord currentLocation, final float angle) {
             String logC = "type: " + type+" ,"+ currentLocation.toString();
-            mLogTVView.setText(logC);
-
             if (!isLoadMapCompleted ) {
                 return;
             }
@@ -1978,19 +1954,19 @@ public class IndoorMapActivity extends Activity implements OnFMMapInitListener,
     }
 
     // 网络状态查询线程
-    Thread checkIpThread = new Thread(new Runnable() {
-        @Override
-        public void run() {
-            while (true){
-                try {
-                    Thread.sleep(1000);
-                    ping("www.jdjt.net", mPing1TV);
-                    ping("10.11.88.103", mPing2TV);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    });
+//    Thread checkIpThread = new Thread(new Runnable() {
+//        @Override
+//        public void run() {
+//            while (true){
+//                try {
+//                    Thread.sleep(1000);
+//                    ping("www.jdjt.net", mPing1TV);
+//                    ping("10.11.88.103", mPing2TV);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    });
 
 }

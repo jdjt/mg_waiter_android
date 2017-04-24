@@ -21,30 +21,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <!-- 统计  -->
         <activity android:name=".TaskStatisticsActivity" />
         <!-- 登录  -->
-        <activity android:name=".login.LoginActivity"/>
+        <activity android:name=".MainActivity"/>
         <!-- 修改密码  -->
         <activity android:name=".login.ResetPasswordActivity"/>
 
         <meta-data android:name="com.fengmap.mapapi.appkey"
             android:value="586474d3190f48f1974777a7a847b063"/>
-
-        <activity android:name="com.fengmap.drpeng.MapMainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
 
         <activity
             android:name="com.fengmap.drpeng.OutdoorMapActivity"

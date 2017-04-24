@@ -20,51 +20,6 @@
         android:layout_below="@+id/indoor_switch_floor"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-
-        <TextView
-            android:background="#22000000"
-            android:id="@+id/fm_tv_log_ping1"
-            android:layout_above="@+id/fm_tv_log_ping2"
-            android:layout_marginBottom="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:background="#22000000"
-            android:id="@+id/fm_tv_log_ping2"
-            android:layout_above="@+id/fm_tv_log_status"
-            android:layout_marginBottom="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-
-        <TextView
-            android:background="#22000000"
-            android:layout_marginBottom="10dp"
-            android:layout_above="@+id/fm_tv_assert_log"
-            android:id="@+id/fm_tv_log_status"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-
-        <TextView
-            android:background="#22000000"
-            android:layout_above="@+id/fm_tv_log"
-            android:id="@+id/fm_tv_assert_log"
-            android:layout_marginBottom="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-
-        <TextView
-            android:background="#22000000"
-            android:id="@+id/fm_tv_log"
-            android:layout_marginBottom="100dp"
-            android:layout_alignParentBottom="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
     </com.fengmap.android.map.FMMapView>
 
     <com.fengmap.drpeng.widget.SwitchFloorView
@@ -76,6 +31,7 @@
     <com.fengmap.drpeng.widget.DrawableCenterTextView
         android:id="@+id/indoor_call"
         android:text="呼叫"
+        android:visibility="gone"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
         android:layout_alignParentRight="true"
@@ -93,6 +49,7 @@
     <ImageView
         android:id="@+id/indoor_location"
         android:layout_alignParentLeft="true"
+        android:visibility="gone"
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="10dp"
         android:background="@drawable/fm_green_normal_button"

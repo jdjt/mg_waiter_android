@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.android.mgwaiter.MainActivity;
 import com.android.mgwaiter.R;
 import com.fengmap.android.FMMapSDK;
 import com.fengmap.android.analysis.navi.FMNaviAnalyser;
@@ -173,14 +174,7 @@ public class OutdoorMapActivity extends Activity implements View.OnClickListener
     private FMDBSearchElement mSearchElement;
     private FMDBMapElement    mMapElement;
     private String            mFromWhere;
-
     private boolean isLocateSuccess = false;
-
-    private TextView mLogTVView;
-    private TextView mAssertLogTVView;
-    private TextView mLogStatus;
-    private TextView mPing1TV;
-    private TextView mPing2TV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -209,21 +203,6 @@ public class OutdoorMapActivity extends Activity implements View.OnClickListener
 
         mCallView = (DrawableCenterTextView) findViewById(R.id.fm_bt_call);
         mCallView.setOnClickListener(this);
-
-        mLogTVView = (TextView) findViewById(R.id.fm_tv_log);
-        mLogTVView.setTextColor(Color.BLUE);
-
-        mAssertLogTVView = (TextView) findViewById(R.id.fm_tv_assert_log);
-        mAssertLogTVView.setTextColor(Color.RED);
-
-        mLogStatus = (TextView) findViewById(R.id.fm_tv_log_status);
-        mLogStatus.setTextColor(Color.MAGENTA);
-
-        mPing1TV = (TextView) findViewById(R.id.fm_tv_log_ping1);
-        mPing1TV.setTextColor(Color.CYAN);
-        mPing2TV = (TextView) findViewById(R.id.fm_tv_log_ping2);
-        mPing2TV.setTextColor(Color.GREEN);
-
         mMapView = (FMMangroveMapView) findViewById(R.id.mapview);
         mMap = mMapView.getFMMap();
 
@@ -362,7 +341,7 @@ public class OutdoorMapActivity extends Activity implements View.OnClickListener
                 // 地图选点
 
             }
-        } else if (MapMainActivity.class.getName().equals(pWhere)) {
+        } else if (MainActivity.class.getName().equals(pWhere)) {
             // 正常进入
         } else if (IndoorMapActivity.class.getName().equals(pWhere)) {
             // 从室内地图界面而来
@@ -1017,12 +996,11 @@ public class OutdoorMapActivity extends Activity implements View.OnClickListener
             @Override
             public void wifiDelayTime(int pDelayTime) {
                 wifiDelayTime = pDelayTime;
-                mLogStatus.setText("WIFI: "+ wifiStatues+", DelayTime: "+wifiDelayTime);
             }
 
             @Override
             public void logText(String pText) {
-                mAssertLogTVView.setText(pText);
+
             }
 
         });
@@ -1110,61 +1088,62 @@ public class OutdoorMapActivity extends Activity implements View.OnClickListener
         eml.setOnFMNodeListener(new OnFMNodeListener() {
             @Override
             public boolean onClick(FMNode pFMNode) {
-                if (FMAPI.instance().needFilterNavigationWhenOperation(mInstance)) {
-                    return false;
-                }
-
-                mCurrentModel = (FMExternalModel)pFMNode;
-
-                if (mCurrentModel.getDataType()==100000 ||
-                    mCurrentModel.getFid().equals("999800171") ||
-                    mCurrentModel.getFid().equals("999800170")) {
-                    return false;
-                }
-
-                if (mLastModel != null) {
-                    mMapView.setHighlight(mLastModel, false);
-                }
-
-                mMapView.setHighlight(mCurrentModel, true);
-
-                mLastModel = mCurrentModel;
-
-                mMap.updateMap();
-
-                ModelView view = (ModelView) mOpenModelInfoWindow.getConvertView();
-                String name = mCurrentModel.getName();
-                if ("".equals(name) || name == null) {
-                    name = "暂无名称";
-                }
-                view.setTitle(name);
-                // 查询
-                List<FMDBMapElement> elements = mMapElementDAO.queryFid(mMap.currentMapId(), mCurrentModel.getFid());
-                String               typeName = "";
-                String               address  = "";
-                if (!elements.isEmpty()) {
-                    typeName = elements.get(0).getTypename();
-                    address = elements.get(0).getAddress();
-                }
-                elements.clear();
-                elements = null;
-                String viewAddress = "";
-                if (typeName==null || typeName.equals("")) {
-                    viewAddress = address;
-                } else {
-                    viewAddress = String.format("%s・%s", typeName, address);
-                }
-                view.setAddress(viewAddress);
-                view.setEnterMapIdByModelFid(mCurrentModel.getFid());
-
-                mOpenModelInfoWindow.showAsDropDown(mMapView, 0, -mMapView.getHeight());
-
-                mSceneAnimator.animateMoveToScreenCenter(mCurrentModel.getCenterMapCoord())
-                        .setInterpolator(new FMLinearInterpolator(FMInterpolator.STAGE_INOUT))
-                        .setDurationTime(800)
-                        .start();
-
-                return true;
+                //禁地图点击事件
+//                if (FMAPI.instance().needFilterNavigationWhenOperation(mInstance)) {
+//                    return false;
+//                }
+//
+//                mCurrentModel = (FMExternalModel)pFMNode;
+//
+//                if (mCurrentModel.getDataType()==100000 ||
+//                    mCurrentModel.getFid().equals("999800171") ||
+//                    mCurrentModel.getFid().equals("999800170")) {
+//                    return false;
+//                }
+//
+//                if (mLastModel != null) {
+//                    mMapView.setHighlight(mLastModel, false);
+//                }
+//
+//                mMapView.setHighlight(mCurrentModel, true);
+//
+//                mLastModel = mCurrentModel;
+//
+//                mMap.updateMap();
+//
+//                ModelView view = (ModelView) mOpenModelInfoWindow.getConvertView();
+//                String name = mCurrentModel.getName();
+//                if ("".equals(name) || name == null) {
+//                    name = "暂无名称";
+//                }
+//                view.setTitle(name);
+//                // 查询
+//                List<FMDBMapElement> elements = mMapElementDAO.queryFid(mMap.currentMapId(), mCurrentModel.getFid());
+//                String               typeName = "";
+//                String               address  = "";
+//                if (!elements.isEmpty()) {
+//                    typeName = elements.get(0).getTypename();
+//                    address = elements.get(0).getAddress();
+//                }
+//                elements.clear();
+//                elements = null;
+//                String viewAddress = "";
+//                if (typeName==null || typeName.equals("")) {
+//                    viewAddress = address;
+//                } else {
+//                    viewAddress = String.format("%s・%s", typeName, address);
+//                }
+//                view.setAddress(viewAddress);
+//                view.setEnterMapIdByModelFid(mCurrentModel.getFid());
+//
+//                mOpenModelInfoWindow.showAsDropDown(mMapView, 0, -mMapView.getHeight());
+//
+//                mSceneAnimator.animateMoveToScreenCenter(mCurrentModel.getCenterMapCoord())
+//                        .setInterpolator(new FMLinearInterpolator(FMInterpolator.STAGE_INOUT))
+//                        .setDurationTime(800)
+//                        .start();
+//
+                return false;
             }
 
             @Override
@@ -1804,7 +1783,6 @@ public class OutdoorMapActivity extends Activity implements View.OnClickListener
         @Override
         public void onReceiveLocation(int type, FMTotalMapCoord lastLocation, FMTotalMapCoord currentLocation, final float angle) {
             String logC = "type: " + type+" ,"+ currentLocation.toString();
-            mLogTVView.setText(logC);
 
             if (!isMapLoadCompleted) {
                 return;
@@ -1971,18 +1949,18 @@ public class OutdoorMapActivity extends Activity implements View.OnClickListener
     }
 
     // 网络状态查询线程
-    Thread checkIpThread = new Thread(new Runnable() {
-        @Override
-        public void run() {
-            while (true){
-                try {
-                    Thread.sleep(1000);
-                    ping("www.jdjt.net", mPing1TV);
-                    ping("10.11.88.103", mPing2TV);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-    });
+//    Thread checkIpThread = new Thread(new Runnable() {
+//        @Override
+//        public void run() {
+//            while (true){
+//                try {
+//                    Thread.sleep(1000);
+//                    ping("www.jdjt.net", mPing1TV);
+//                    ping("10.11.88.103", mPing2TV);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+//    });
 }

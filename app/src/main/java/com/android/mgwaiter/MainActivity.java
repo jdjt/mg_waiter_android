@@ -4,6 +4,7 @@ import android.content.Context;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -16,7 +17,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.mgwaiter.login.LoginActivity;
-import com.fengmap.drpeng.MapMainActivity;
+import com.fengmap.android.wrapmv.Tools;
+import com.fengmap.drpeng.FMAPI;
+import com.fengmap.drpeng.OutdoorMapActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -43,6 +46,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView  tv_call_content;//呼叫内容
     private TextView  tv_ordertime;//下单时间
     private Button bt_end;//完成
+
+    private Handler mHandler = new Handler();
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -107,6 +113,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //打开地图
     private void openMap() {
-        startActivity(new Intent(this, MapMainActivity.class));
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Bundle b = new Bundle();
+                b.putString(FMAPI.ACTIVITY_WHERE, MainActivity.class.getName());
+                b.putString(FMAPI.ACTIVITY_MAP_ID, Tools.OUTSIDE_MAP_ID);
+                FMAPI.instance().gotoActivity(MainActivity.this, OutdoorMapActivity.class, b);
+                MainActivity.this.finish();
+            }
+        }, 500);
     }
 }
