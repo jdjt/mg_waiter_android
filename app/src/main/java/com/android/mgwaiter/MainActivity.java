@@ -87,7 +87,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
 //        int heightPixels = dm.heightPixels;
         setContentView(R.layout.activity_main);
         context = this;
-
+        HashMap<String, String> map = new HashMap<>();
+        map.put("name", "王二");
+        map.put("number", "1000687");
+        map.put("call", "郁林酒店");
+        map.put("message", "您好，请来我这打扫一下房间");
+        map.put("time", "2017-3-6");
+        taskingList.add(map);
         taskingList = new ArrayList<>();
         app = MgApplication.getInstance();
         init();
@@ -151,10 +157,21 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     workingState = master.getWorkStatus();
                     switch (workingState){
                         case 0:
+                            bt_work_state.setText("开始接单");
+                            bt_work_state.setBackgroundResource(R.drawable.work_state_btn);
+                            taskingList.clear();
+                            taskingAdapter.notifyDataSetChanged();
                             break;
                         case 1:
+                            getTaskMessage();
                             break;
                         case 2:
+                            bt_work_state.setText("停止抢单");
+                            bt_work_state.setBackgroundResource(R.drawable.work_state_end_btn);
+//                         settingMasterState(workingState);
+//                        getMaskingList();
+                            taskingAdapter = new TaskingListAdapter(context, taskingList);
+                            task_list.setAdapter(taskingAdapter);
 
                             break;
                     }
@@ -181,13 +198,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
                 switch (workingState) {
                     case 0:
-                        HashMap<String, String> map = new HashMap<>();
-                        map.put("name", "王二");
-                        map.put("number", "1000687");
-                        map.put("call", "郁林酒店");
-                        map.put("message", "您好，请来我这打扫一下房间");
-                        map.put("time", "2017-3-6");
-                        taskingList.add(map);
+
                         workingState = 2;
                         bt_work_state.setText("停止抢单");
                         bt_work_state.setBackgroundResource(R.drawable.work_state_end_btn);
@@ -534,12 +545,73 @@ public class MainActivity extends Activity implements View.OnClickListener {
             public void onReqSuccess(ResponseEntity result) {
                 taskMessage message = new Gson().fromJson(result.getContentAsString(), new TypeToken<taskMessage>() {
                 }.getType());
-                Date Currenttime=message.getAcceptTime();
-                Date Limittime=message.getNowDate();
-                String startTime=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Currenttime);
-                String systemTime=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Limittime);
-               long time= timerStart(startTime,systemTime);
-                intTimerService(time);
+                int tag=message.getTaskStatus();
+                switch (tag){
+                    case 1:
+                        Date Currenttime=message.getAcceptTime();
+                        Date Limittime=message.getNowDate();
+                        String startTime=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Currenttime);
+                        String systemTime=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(Limittime);
+                        long time= timerStart(startTime,systemTime);
+                        intTimerService(time);
+                        // grabSingle();
+                        workingState = 1;
+                        //settingMasterState(workingState);
+                        bt_work_state.setBackgroundResource(R.drawable.work_state_btn_tasking);
+                        bt_work_state.setFocusable(false);
+                        bt_tasking.setText("进行中任务(1)");
+                        bt_tasking.setTextColor(Color.parseColor("#ffffff"));
+                        ll_layout_bottom.setVisibility(View.VISIBLE);
+                        wrfLayout.setVisibility(View.GONE);
+                        tv_taking_Off.setFocusable(false);
+                        tv_taking_Off.setTextColor(Color.parseColor("#70ffffff"));
+//                        HashMap<String, String> map = list.get(position);
+//                        tv_name.setText(map.get(""));
+//                        tv_number.setText(map.get(""));
+//                        tv_call_region.setText(map.get(""));
+//                        tv_call_content.setText(map.get(""));
+//                        tv_ordertime.setText(map.get(""));
+                        break;
+                    case 2:
+
+                        String finishTime=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(message.getFinishTime());
+                        String systemTim=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(message.getNowDate());
+                       int m1 = Integer.parseInt(finishTime.substring(14, 16));
+                       int s1 = Integer.parseInt(finishTime.substring(17, 19));
+                       int m2 = Integer.parseInt(systemTim.substring(14, 16));
+                       int s2 = Integer.parseInt(systemTim.substring(17, 19));
+                      m=29-m2-m1;
+                       s=59-s2-s1;
+                        bt_end.setFocusable(false);
+                        bt_end.setBackgroundResource(R.drawable.work_state_btn_tasking);
+                        bt_tasking.setTextColor(Color.parseColor("#ffffff"));
+                        service_time.stop();
+                        new Thread(new Runnable() {
+
+                            public void run() {
+                                while (s > 0) {
+                                    s--;
+                                    try {
+                                        Thread.sleep(1000);
+                                        Message msg = Message.obtain();
+                                        msg.arg1 = m;
+                                        msg.arg2 = s;
+                                        msg.what = 10;
+                                        if (s == 1 && m > 0) {
+                                            s = 60;
+                                            m--;
+                                        }
+                                        handler.sendMessage(msg);
+                                    } catch (InterruptedException e) {
+
+                                        e.printStackTrace();
+                                    }
+                                }
+                            }
+                        }).start();
+                        break;
+                }
+
 
 
             }
